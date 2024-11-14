@@ -82,6 +82,7 @@ plugins=(git)
 # Example aliases
 alias zshconfig="zed ~/.zshrc"
 alias zshrc="zed ~/.zshrc"
+alias chez="zed /Users/qpair/.local/share/chezmoi"
 alias ls='lsd'
 alias edit='open -a TextEdit'
 alias '..'='cd ..'
