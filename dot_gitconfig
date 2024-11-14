@@ -1,0 +1,8 @@
+[user]
+	name = q
+	email = phamousq@gmail.com
+[push]
+	autoSetupRemote = true
+	default = simple
+[branch]
+	autosetupmerge = simple
