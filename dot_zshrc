@@ -87,6 +87,8 @@ alias edit='open -a TextEdit'
 alias '..'='cd ..'
 alias '...'='cd ../..'
 alias zed="/Applications/Zed.app/Contents/MacOS/cli"
+alias npm='pnpm'
+alias npx='pnpm dlx'
 
 
 # Load Git completion

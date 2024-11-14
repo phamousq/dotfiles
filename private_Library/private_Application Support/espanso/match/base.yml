@@ -9,29 +9,33 @@
 # it gets replaced by the "replace" string.
 matches:
   # Simple text replacement
-  - trigger: ":espanso"
-    replace: "Hi there!"
+  - trigger: ;zoom
+    replace: |
+      Join Zoom Meeting
+      https://utexas.zoom.us/j/9602251508
+      Meeting ID:  960 225 1508
 
-  # NOTE: espanso uses YAML to define matches, so pay attention to the indentation!
+  - trigger: ;eadd
+    replace: "- trigger:\nreplace:"
 
-  # But matches can also be dynamic:
+  - trigger: ;g
+    replace: git pull && git add . && git commit -m '$|$' && git push
 
-  # Print the current date
-  - trigger: ":date"
+  # Dynamic Matches
+
+  - trigger: ";dd"
     replace: "{{mydate}}"
     vars:
       - name: mydate
         type: date
         params:
-          format: "%m/%d/%Y"
+          format: "%Y-%m-%d"
 
-  # Print the output of a shell command
-  - trigger: ":shell"
-    replace: "{{output}}"
+  - trigger: ";dt"
+    replace: "{{mytime}}"
     vars:
-      - name: output
-        type: shell
+      - name: mytime
+        type: date
         params:
-          cmd: "echo 'Hello from your shell'"
-
+          format: "%H:%M"
   # And much more! For more information, visit the docs: https://espanso.org/docs/

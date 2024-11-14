@@ -1,0 +1,25 @@
+# espanso medical matches
+
+global_vars:
+  - name: MyName
+    type: echo
+    params:
+      echo: Quinton
+
+# Matches are substitution rules: when you type the "trigger" string
+# it gets replaced by the "replace" string.
+matches:
+  # Simple text replacement
+  - trigger: ;attest
+    replace: "I participated in the care and documentation of this patient visit. -Quinton Pham, MS3"
+
+  - trigger: ;physical
+    replace: |
+      GENERAL APPEARANCE: No acute distress, alert and cooperative
+      HEENT: normocephalic, EOMI, MMM, Oral cavity and pharynx normal. No inflammation, swelling, exudate, or lesions.
+      NECK: Neck supple, non-tender without lymphadenopathy, masses or thyromegaly.
+      CARDIAC: Rhythm is regular. No murmurs, rubs, or gallops, No peripheral edema, cyanosis or pallor. Extremities are warm and well perfused. Capillary refill <2 seconds. Bilateral upper extremity pulses are 2+.
+      LUNGS: Clear to auscultation and percussion without rales, rhonchi, wheezing.
+      ABDOMEN: Soft, nondistended, nontender. No guarding or rebound. No masses.
+      SKIN: Skin normal color, texture and turgor with no lesions or eruptions.
+      PSYCHIATRIC: AAOx4. The patient was able to demonstrate good judgment and reason. No abnormal behaviors during the examination.
