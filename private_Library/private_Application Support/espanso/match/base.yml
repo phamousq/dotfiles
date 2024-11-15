@@ -18,7 +18,7 @@ matches:
   - trigger: ;eadd
     replace: "- trigger:\nreplace:"
 
-  - trigger: ;g
+  - trigger: ;git
     replace: git pull && git add . && git commit -m '$|$' && git push
 
   # Dynamic Matches
