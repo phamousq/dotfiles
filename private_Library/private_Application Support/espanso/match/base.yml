@@ -10,11 +10,11 @@
 matches:
   # Simple text replacement
   - trigger: ;zoom
+    label: Zoom
     replace: |
       Join Zoom Meeting
       https://utexas.zoom.us/j/9602251508
       Meeting ID:  960 225 1508
-
   - trigger: ;eadd
     replace: "- trigger:\nreplace:"
 
@@ -23,7 +23,7 @@ matches:
 
   # Dynamic Matches
 
-  - trigger: ";dd"
+  - trigger: ;dd
     replace: "{{mydate}}"
     vars:
       - name: mydate
@@ -31,7 +31,7 @@ matches:
         params:
           format: "%Y-%m-%d"
 
-  - trigger: ";dt"
+  - trigger: ;dt
     replace: "{{mytime}}"
     vars:
       - name: mytime
