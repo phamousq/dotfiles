@@ -5,8 +5,8 @@
     "dark": "macOS Classic Dark2"
   },
   "vim_mode": false,
-  "ui_font_size": 14,
-  "buffer_font_size": 16,
+  "ui_font_size": 18,
+  "buffer_font_size": 18,
   "buffer_font_family": "Monaspace Argon Var",
   "restore_on_startup": "last_workspace",
   "format_on_save": "off",

@@ -12,7 +12,7 @@ after-login-command = []
 after-startup-command = []
 
 # Start AeroSpace at login
-start-at-login = false
+start-at-login = true
 
 # Normalizations. See: https://nikitabobko.github.io/AeroSpace/guide#normalization
 enable-normalization-flatten-containers = true
@@ -24,7 +24,7 @@ enable-normalization-opposite-orientation-for-nested-containers = true
 accordion-padding = 5
 
 # Possible values: tiles|accordion
-default-root-container-layout = 'accordion'
+default-root-container-layout = 'tiles'
 
 # Possible values: horizontal|vertical|auto
 # 'auto' means: wide monitor (anything wider than high) gets horizontal orientation,
@@ -76,7 +76,6 @@ outer.right =      5
 
 # All possible commands: https://nikitabobko.github.io/AeroSpace/commands
 
-# You can uncomment this line to open up terminal with alt + enter shortcut
 # See: https://nikitabobko.github.io/AeroSpace/commands#exec-and-forget
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#layout
@@ -84,10 +83,10 @@ alt-slash = 'layout tiles horizontal vertical'
 alt-comma = 'layout accordion horizontal vertical'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#focus
-alt-h = 'focus left'
-alt-j = 'focus down'
-alt-k = 'focus up'
-alt-l = 'focus right'
+ctrl-h = 'focus left'
+ctrl-j = 'focus down'
+ctrl-k = 'focus up'
+ctrl-l = 'focus right'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move
 ctrl-shift-h = 'move left'
@@ -100,6 +99,7 @@ ctrl-minus = 'resize smart -50'
 ctrl-equal = 'resize smart +50'
 
 alt-backslash = 'layout floating tiling'
+alt-enter = 'fullscreen'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
 alt-1 = 'workspace 1'
@@ -107,32 +107,20 @@ alt-2 = 'workspace 2'
 alt-3 = 'workspace 3'
 alt-4 = 'workspace 4'
 alt-5 = 'workspace 5'
+alt-left = 'workspace --wrap-around prev'
+alt-right = 'workspace --wrap-around next'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
-alt-shift-1 = 'move-node-to-workspace 1'
-alt-shift-2 = 'move-node-to-workspace 2'
-alt-shift-3 = 'move-node-to-workspace 3'
-alt-shift-4 = 'move-node-to-workspace 4'
-alt-shift-5 = 'move-node-to-workspace 5'
-
-alt-shift-f = 'fullscreen'
-
-# See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
-
-# See: https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor
-
-
-# See: https://nikitabobko.github.io/AeroSpace/commands#mode
-
-alt-shift-h = ['join-with left', 'mode main']
-alt-shift-j = ['join-with down', 'mode main']
-alt-shift-k = ['join-with up', 'mode main']
-alt-shift-l = ['join-with right', 'mode main']
+alt-shift-1 = ['move-node-to-workspace 1', 'workspace 1']
+alt-shift-2 = ['move-node-to-workspace 2', 'workspace 2']
+alt-shift-3 = ['move-node-to-workspace 3', 'workspace 3']
+alt-shift-4 = ['move-node-to-workspace 4', 'workspace 4']
+alt-shift-5 = ['move-node-to-workspace 5', 'workspace 5']
 
 [[on-window-detected]]
-if.app-id = 'com.github.wez.wezterm'
-run = "move-node-to-workspace T"
+if.app-id = 'net.ankiweb.dtop'
+run = "move-node-to-workspace 2"
 
 [[on-window-detected]]
-if.app-id = 'com.google.Chrome'
-run = "move-node-to-workspace B"
+if.app-id = 'com.apple.finder'
+run = 'layout floating'
