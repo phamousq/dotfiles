@@ -1,0 +1,16 @@
+{
+  :profiles
+    {:Main { :default true :sim 60 :delay 170 :alone 170 :held 170}}
+  :main [
+    {:des "Simultaneous keys / Chording"
+      :rules [:Main
+        ;; ;; example [{:sim [:x :x] :modi {:optional [:any] }} :x]
+        [{:sim [:comma :slash] :modi {:optional [:any] }} :caps_lock]
+        [{:sim [:comma :period] :modi {:optional [:any] }} :!OSm]
+        [{:sim [:d :b] :modi {:optional [:any] }} :delete_or_backspace]
+        [{:sim [:h :l] :modi {:optional [:any] }} :delete_forward]
+        [{:sim [:h :k] } :!Tx]
+      ]
+    }
+  ]
+}
