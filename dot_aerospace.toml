@@ -131,7 +131,11 @@ alt-shift-5 = ['move-node-to-workspace 5']
 
 [[on-window-detected]]
 if.app-id = 'net.ankiweb.dtop'
-run = "move-node-to-workspace 2"
+run = ['layout floating', 'move-node-to-workspace 2']
+
+[[on-window-detected]]
+if.app-id = 'com.colliderli.iina'
+run = ['layout floating', 'move-node-to-workspace 2']
 
 [[on-window-detected]]
 if.app-id = 'dev.zed.Zed'
