@@ -1548,19 +1548,6 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "semicolon",
-                                    "modifiers": { "mandatory": ["left_command", "left_control", "left_option", "left_shift"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "return_or_enter",
-                                        "modifiers": []
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
                                     "key_code": "v",
                                     "modifiers": { "mandatory": ["left_command", "left_control", "left_option", "left_shift"] }
                                 },
@@ -1669,19 +1656,6 @@
                                     {
                                         "key_code": "close_bracket",
                                         "modifiers": ["right_command", "right_shift"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "o",
-                                    "modifiers": { "mandatory": ["left_command", "left_control", "left_option", "left_shift"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "9",
-                                        "modifiers": ["right_command"]
                                     }
                                 ],
                                 "type": "basic"
@@ -1807,6 +1781,19 @@
                                     {
                                         "key_code": "comma",
                                         "modifiers": ["right_command"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "o",
+                                    "modifiers": { "mandatory": ["left_command", "left_control", "left_option", "left_shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "return_or_enter",
+                                        "modifiers": ["right_option"]
                                     }
                                 ],
                                 "type": "basic"

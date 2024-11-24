@@ -8,5 +8,8 @@
     "explorer.compactFolders": false,
     "workbench.tree.indent": 12,
     "explorer.confirmDragAndDrop": false,
-    "editor.minimap.enabled": false
+    "editor.minimap.enabled": false,
+    "jupyter.interactiveWindow.textEditor.executeSelection": true,
+    "explorer.confirmDelete": false,
+    "window.autoDetectColorScheme": true
 }
