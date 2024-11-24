@@ -11,5 +11,9 @@
     "editor.minimap.enabled": false,
     "jupyter.interactiveWindow.textEditor.executeSelection": true,
     "explorer.confirmDelete": false,
-    "window.autoDetectColorScheme": true
+    "window.autoDetectColorScheme": true,
+    "redhat.telemetry.enabled": true,
+    "jupyter.interactiveWindow.creationMode": "perFile",
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "notebook.defaultFormatter": "charliermarsh.ruff"
 }

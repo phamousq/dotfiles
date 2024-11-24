@@ -21,5 +21,9 @@
     {
         "key": "alt+cmd+n",
         "command": "-extension.advancedNewFile"
+    },
+    {
+        "key": "cmd+k",
+        "command": "workbench.action.focusNextGroup"
     }
 ]

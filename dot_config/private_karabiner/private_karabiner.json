@@ -905,7 +905,7 @@
                                     }
                                 ],
                                 "from": { "key_code": "j" },
-                                "to": [{ "apple_vendor_top_case_key_code": "keyboard_fn" }],
+                                "to": [{ "consumer_key_code": "dictation" }],
                                 "type": "basic"
                             },
                             {
