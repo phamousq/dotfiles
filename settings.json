@@ -8,7 +8,6 @@
     "explorer.compactFolders": false,
     "workbench.tree.indent": 12,
     "explorer.confirmDragAndDrop": false,
-    "editor.minimap.enabled": false,
     "jupyter.interactiveWindow.textEditor.executeSelection": true,
     "explorer.confirmDelete": false,
     "window.autoDetectColorScheme": true,
@@ -16,5 +15,6 @@
     "jupyter.interactiveWindow.creationMode": "perFile",
     "editor.defaultFormatter": "charliermarsh.ruff",
     "notebook.defaultFormatter": "charliermarsh.ruff",
-    "explorer.confirmPasteNative": false
+    "explorer.confirmPasteNative": false,
+    "editor.minimap.enabled": false
 }

@@ -1,0 +1,3 @@
+*.code-workspace
+chezmoi.yaml
+settings.json
