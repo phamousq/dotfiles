@@ -1602,8 +1602,8 @@
               }
             },
             "to" : [ {
-              "key_code" : "delete_or_backspace",
-              "modifiers" : [ ]
+              "key_code" : "backslash",
+              "modifiers" : ["right_option"]
             } ],
             "type" : "basic"
           }, {
