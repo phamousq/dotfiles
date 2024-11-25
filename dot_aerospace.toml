@@ -26,7 +26,7 @@ enable-normalization-opposite-orientation-for-nested-containers = true
 # See: https://nikitabobko.github.io/AeroSpace/guide#layouts
 # The 'accordion-padding' specifies the size of accordion padding
 # You can set 0 to disable the padding feature
-accordion-padding = 5
+accordion-padding = 40
 
 # Possible values: tiles|accordion
 default-root-container-layout = 'tiles'
@@ -147,6 +147,6 @@ run = "move-node-to-workspace 5"
 if.app-id = 'com.exafunction.windsurf'
 run = "move-node-to-workspace 5"
 
-[[on-window-detected]]
-if.app-id = 'com.apple.finder'
-run = 'layout floating'
+#[[on-window-detected]]
+#if.app-id = 'com.apple.finder'
+#run = 'layout floating'
