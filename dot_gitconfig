@@ -6,3 +6,5 @@
 	default = simple
 [branch]
 	autosetupmerge = simple
+[core]
+	excludesfile = /Users/quintonpham/.gitignore-global
