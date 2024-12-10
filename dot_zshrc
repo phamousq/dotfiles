@@ -73,6 +73,7 @@ plugins=(git)
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
+export GOKU_EDN_CONFIG_FILE="/Users/qpair/.config/karabiner/karabiner.edn"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
