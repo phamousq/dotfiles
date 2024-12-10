@@ -147,6 +147,10 @@ run = "move-node-to-workspace 5"
 if.app-id = 'com.exafunction.windsurf'
 run = "move-node-to-workspace 5"
 
+[[on-window-detected]]
+if.app-id = 'com.electron.wispr-flow'
+run = 'layout floating'
+
 #[[on-window-detected]]
 #if.app-id = 'com.apple.finder'
 #run = 'layout floating'

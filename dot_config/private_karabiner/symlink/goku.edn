@@ -94,7 +94,8 @@
     {:des "Simultaneous keys / Chording" :rules [
       [{:sim [:comma :slash] :modi {:optional [:any]}} :caps_lock]
       [[:f :j] :!Cspacebar]
-      [{:sim [:d :b] :modi {:optional [:any] }} :mission_control]
+      [[:d :b] :!Cmission_control]
+      [[:d :g] :mission_control]
       [[:j :k] :!Odelete_or_backspace]
       [[:j :l] :return_or_enter]
       [[:f :tab] :!Stab]
@@ -127,7 +128,7 @@
       ;; [:!!x]
       ;; [:!!c]
       [:!!v :return_or_enter]
-      ;; [:!!b]
+      [:!!b :!Ob]
       [:!!n :!Oleft_arrow]
       [:!!m :!Oright_arrow]
       ;; [:!!comma]
@@ -153,7 +154,7 @@
       [:g :spacebar                [:anki :8bitdo]]
       [:g :return_or_enter         [:!anki :8bitdo]]
       [:j :2                       [:anki :8bitdo]]
-      [:j :dictation               [:!anki :8bitdo]]
+      [:j :fn               [:!anki :8bitdo]]
       [:i :n                       [:anki :8bitdo]]
       [:i :right_arrow             [:!anki :8bitdo]]
       [:c :d                       [:anki :8bitdo]]
@@ -171,7 +172,7 @@
       [:k :y                       [:anki :8bitdo]]
       [:k :!Ca                     [:!anki :8bitdo]]
       [:m :u                       [:anki :8bitdo]]
-      [:m :delete_or_backspace     [:!anki :8bitdo]]
+      [:m :!Odelete_or_backspace     [:!anki :8bitdo]]
       [:s :!Cv                     [:!anki :8bitdo]]
     ]}
   ] ;;main
