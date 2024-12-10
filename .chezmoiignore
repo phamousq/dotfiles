@@ -2,6 +2,8 @@
 chezmoi.yaml
 settings.json
 
+**dot_DS_Store
+
 # Workflow for adding symlink file;;
 # 1. copy the file to the base directory
 # 2. git add the file

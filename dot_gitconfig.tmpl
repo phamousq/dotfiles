@@ -7,4 +7,8 @@
 [branch]
 	autosetupmerge = simple
 [core]
-	excludesfile = /Users/quintonpham/.gitignore-global
+	excludesFile = "{{ .chezmoi.homeDir }}/.gitignore_global"
+[init]
+	defaultBranch = main
+[color]
+	ui = auto

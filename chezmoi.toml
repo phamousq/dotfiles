@@ -1,9 +1,4 @@
 sourceDir = "/Users/qpair/.local/share/chezmoi"
 
-[git]
-  autoCommit = true
-  commitMessageTemplate = "{{ promptString \"Commit message\" }}"
-
-[edit]
-  command = "wind"
-  args = ["--wait"]
+[data]
+  name = "QPham"
