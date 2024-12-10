@@ -133,6 +133,7 @@
       ;; [:!!comma]
       ;; [:!!period]
       ;; [:!!slash]
+      [:!!backspace :!Odelete_or_backspace]
     ]}
 
     {:des "F+S Simlayer" :rules [
