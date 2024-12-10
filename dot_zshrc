@@ -91,6 +91,9 @@ alias zed="/Applications/Zed.app/Contents/MacOS/cli"
 alias npm='pnpm'
 alias npx='pnpm dlx'
 alias cm='chezmoi'
+alias wind="/Applications/Windsurf.app/Contents/MacOS/Electron ."
+alias act="source .venv/bin/activate"
+alias python=python3
 
 
 # Load Git completion

@@ -1,12 +1,12 @@
 // Place your key bindings in this file to override the defaults
 [
     {
-        "key": "cmd+d",
+        "key": "cmd+k",
         "command": "-editor.action.addSelectionToNextFindMatch",
         "when": "editorFocus"
     },
     {
-        "key": "cmd+d",
+        "key": "cmd+k",
         "command": "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
         "when": "!activeEditorGroupEmpty"
     },
@@ -23,7 +23,16 @@
         "command": "-extension.advancedNewFile"
     },
     {
-        "key": "cmd+k",
+        "key": "cmd+d",
         "command": "workbench.action.focusNextGroup"
+    },
+    {
+        "key": "cmd+j",
+        "command": "workbench.action.terminal.focus"
+    },
+    {
+        "key": "cmd+j",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "terminalFocus"
     }
 ]
