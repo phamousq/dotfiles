@@ -1,6 +1,6 @@
 # Chezmoi
 - running on a new machine:
-  - `sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply phamousq`
+  - `sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply https://github.com/phamousq/dotfiles.git`
   - `brew bundle install`
 - on an existing machine, run 
   - `chezmoi update`
