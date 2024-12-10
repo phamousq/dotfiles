@@ -1,7 +1,7 @@
-*.code-workspace
-chezmoi.yaml
-settings.json
-
+chezmoi.code-workspace
+chezmoi.toml
+README.md
+symlinks**
 **dot_DS_Store
 
 # Workflow for adding symlink file;;
