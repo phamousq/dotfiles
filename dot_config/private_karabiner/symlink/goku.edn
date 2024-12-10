@@ -70,7 +70,7 @@
         {:vendor_id 76}
     ]
     :8bitdo [
-        {:vendor_id 11720, :product_id 12848}
+        {:vendor_id 11720} ;; :product_id 12848 (lite), :product_id 36897 (micro)
     ]
     :keychronq11 [
         {:vendor_id 13364}
