@@ -1,12 +1,12 @@
 # Chezmoi
-- `sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply phamousq`
+- running on a new machine:
+  - `sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply phamousq`
+  - `brew bundle install`
 - on an existing machine, run 
-  - `chezmoi apply`
-- `chezmoi update` when working on a new machine
-- `brew bundle install`
+  - `chezmoi update`
 
 - adding a file to be tracked:
-  - cm add <filename>
+  - `cm add <filename>`
 
 
 - todo
