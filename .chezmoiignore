@@ -1,9 +1,11 @@
 chezmoi.code-workspace
 chezmoi.toml
 README.md
-**symlink^
-**dot_DS_Store
 
-# Workflow for adding symlink file;;
+# Symlinks
+**/symlink
+**/symlink/**
+
+# Workflow for a/Users/qpair/.local/share/chezmoi/private_Library/private_Application Support/private_Windsurfdding symlink file;;
 # 1. copy the file to the base directory
 # 2. git add the file

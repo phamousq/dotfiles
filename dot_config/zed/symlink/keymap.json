@@ -3,7 +3,7 @@
     "bindings": {
       "cmd-j": "terminal_panel::ToggleFocus",
       "cmd-shift-f": "outline_panel::ToggleFocus",
-      "cmd-shift-k": "project_panel::ToggleFocus",
+      "cmd-shift-k": "project_panel::ToggleFocus"
     }
   }
 ]
