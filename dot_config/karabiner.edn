@@ -112,7 +112,7 @@
       ;; [:!!y]
       [:!!u :!CSopen_bracket]
       [:!!i :!CSclose_bracket]
-      ;; [:!!o]
+      [:!!o :!Oreturn_or_enter]
       ;; [:!!p]
       ;; [:!!a]
       [:!!s :delete_or_backspace]
