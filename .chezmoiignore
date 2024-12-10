@@ -1,9 +1,8 @@
 chezmoi.code-workspace
-chezmoi.toml
-README.md
+**README.md
 
 # Symlinks
-**/symlink
+**/symlink/
 **/symlink/**
 
 # Workflow for a/Users/qpair/.local/share/chezmoi/private_Library/private_Application Support/private_Windsurfdding symlink file;;
