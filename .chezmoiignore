@@ -1,7 +1,7 @@
 chezmoi.code-workspace
 chezmoi.toml
 README.md
-symlinks**
+**symlink^
 **dot_DS_Store
 
 # Workflow for adding symlink file;;
