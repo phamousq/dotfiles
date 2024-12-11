@@ -1,7 +1,7 @@
 {
-    "terminal.integrated.fontFamily": "FiraCode Nerd Font Mono",
-    "editor.fontFamily": "Monaspace Argon Var",
-    "editor.fontSize": 13,
+    "terminal.integrated.fontFamily": "'MonaspiceAr Nerd Font Mono'",
+    "editor.fontFamily": "'MonaspiceAr Nerd Font Var'",
+    "editor.fontSize": 14,
     "editor.fontLigatures": "'calt', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09', 'liga'",
     "editor.bracketPairColorization.enabled": true,
     "editor.quickSuggestions": {
@@ -59,7 +59,7 @@
     "workbench.preferredDarkColorTheme": "GitHub Dark Default",
     "window.autoDetectColorScheme": true,
     "liveServer.settings.donotShowInfoMsg": true,
-    "terminal.integrated.fontSize": 12,
+    "terminal.integrated.fontSize": 14,
     "beautify.onSave": true,
     "beautify.JSfiles": ["js", "json", "jsbeautifyrc", "jshintrc", "ts"],
     // "workbench.sideBar.location": "right",
