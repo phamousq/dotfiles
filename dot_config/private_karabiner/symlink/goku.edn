@@ -90,6 +90,7 @@
   :main [
     {:des "Basic Modifications" :rules [
       [:!Sdelete_or_backspace :delete_forward]
+      [:!Cd :!Ttab]
     ]}
     {:des "Simultaneous keys / Chording" :rules [
       [{:sim [:comma :slash] :modi {:optional [:any]}} :caps_lock]
@@ -101,6 +102,7 @@
       [[:f :tab] :!Stab]
       [[:z :c] :!Cc]
       [[:z :v] :!Cv]
+      [[:f :k] :!!f]
     ]}
     {:des "Hyper" :rules [
       [:caps_lock :!CSOleft_control nil {:alone :escape}]
@@ -117,7 +119,7 @@
       [:!!p :!Obackslash]
       ;; [:!!a]
       [:!!s :delete_or_backspace]
-      ;; [:!!d]
+      [:!!d :!Ttab]
       ;; [:!!f]
       ;; [:!!g]
       [:!!h :left_arrow]
