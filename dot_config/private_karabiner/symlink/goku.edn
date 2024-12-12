@@ -119,7 +119,7 @@
       [:!!p :!Obackslash]
       ;; [:!!a]
       [:!!s :delete_or_backspace]
-      [:!!d :!Ttab]
+      ;; [:!!d]
       ;; [:!!f]
       ;; [:!!g]
       [:!!h :left_arrow]
