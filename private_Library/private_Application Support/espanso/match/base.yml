@@ -40,10 +40,16 @@ matches:
         type: date
         params:
           format: "%y.%m.%d"
-
+  - trigger: ;jj
+    replace: "## [[{{mydate}}]]\n - "
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%Y-%m-%d"
 
   - trigger: ;dt
-    replace: "{{mytime}}"
+    replace: "{{mytime}} -"
     vars:
       - name: mytime
         type: date

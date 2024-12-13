@@ -91,6 +91,8 @@
     {:des "Basic Modifications" :rules [
       [:!Sdelete_or_backspace :delete_forward]
       [:!Cd :!Ttab]
+      [:!Sspacebar :1 :anki]
+      [:!Rspacebar :1 :anki]
     ]}
     {:des "Simultaneous keys / Chording" :rules [
       [{:sim [:comma :slash] :modi {:optional [:any]}} :caps_lock]
@@ -156,7 +158,7 @@
       [:g :spacebar                [:anki :8bitdo]]
       [:g :return_or_enter         [:!anki :8bitdo]]
       [:j :2                       [:anki :8bitdo]]
-      [:j :fn               [:!anki :8bitdo]]
+      [:j :fn                      [:!anki :8bitdo]]
       [:i :n                       [:anki :8bitdo]]
       [:i :right_arrow             [:!anki :8bitdo]]
       [:c :d                       [:anki :8bitdo]]
@@ -174,7 +176,7 @@
       [:k :y                       [:anki :8bitdo]]
       [:k :!Ca                     [:!anki :8bitdo]]
       [:m :u                       [:anki :8bitdo]]
-      [:m :!Odelete_or_backspace     [:!anki :8bitdo]]
+      [:m :!Odelete_or_backspace   [:!anki :8bitdo]]
       [:s :!Cv                     [:!anki :8bitdo]]
     ]}
   ] ;;main
