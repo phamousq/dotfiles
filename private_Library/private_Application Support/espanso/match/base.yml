@@ -49,7 +49,7 @@ matches:
           format: "%Y-%m-%d"
 
   - trigger: ;dt
-    replace: "{{mytime}} -"
+    replace: "{{mytime}}"
     vars:
       - name: mytime
         type: date
