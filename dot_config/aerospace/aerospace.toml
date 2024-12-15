@@ -116,55 +116,18 @@ alt-cmd-ctrl-shift-d = 'workspace-back-and-forth'
 alt-left = 'workspace prev'
 alt-right = 'workspace next'
 
-# Workspace Commands https://nikitabobko.github.io/AeroSpace/commands#workspace
-## ! Workspace1: Browser and messages
 alt-1 = 'workspace 1'
 alt-shift-1 = ['move-node-to-workspace 1']
-[[on-window-detected]]
-if.app-id = 'company.thebrowser.Browser'
-run = ['move-node-to-workspace 1']
-[[on-window-detected]]
-if.app-id = 'com.apple.MobileSMS'
-run = ['move-node-to-workspace 1', 'layout floating']
-
-## ! Workspace2: obsidian 
 alt-2 = 'workspace 2'
 alt-shift-2 = ['move-node-to-workspace 2']
-[[on-window-detected]]
-if.app-id = 'md.obsidian'
-run = ['move-node-to-workspace 2']
-
-## ! Workspace3: Step 
 alt-3 = 'workspace 3'
 alt-shift-3 = ['move-node-to-workspace 3']
-
-[[on-window-detected]]
-if.app-id = 'net.ankiweb.dtop'
-run = ['layout floating', 'move-node-to-workspace 3']
-
-[[on-window-detected]]
-if.app-id = 'com.colliderli.iina'
-run = ['layout floating', 'move-node-to-workspace 3']
-
-[[on-window-detected]]
-if.app-id = 'io.remnote'
-run = ['move-node-to-workspace 3']
-
-## ! Workspace4: School Related Extracurricular
 alt-4 = 'workspace 4'
 alt-shift-4 = ['move-node-to-workspace 4']
-
-## ! Workspace5: Coding 
 alt-5 = 'workspace 5'
 alt-shift-5 = ['move-node-to-workspace 5']
-
-[[on-window-detected]]
-if.app-id = 'dev.zed.Zed'
-run = "move-node-to-workspace 5"
-
-[[on-window-detected]]
-if.app-id = 'com.exafunction.windsurf'
-run = "move-node-to-workspace 5"
+alt-6 = 'workspace 6'
+alt-shift-6 = ['move-node-to-workspace 6']
 
 ## ! Floating Windows
 [[on-window-detected]]
@@ -186,3 +149,59 @@ run = 'layout floating'
 [[on-window-detected]]
 if.app-id = 'com.apple.finder'
 run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.MobileSMS'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'ankiweb.dtop'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.colliderli.iina'
+run = 'layout floating'
+
+# Workspace Commands https://nikitabobko.github.io/AeroSpace/commands#workspace
+## ! Workspace1: Browser and messages
+[[on-window-detected]]
+if.app-id = 'company.thebrowser.Browser'
+run = ['move-node-to-workspace 1']
+
+[[on-window-detected]]
+if.app-id = 'com.apple.MobileSMS'
+run = ['move-node-to-workspace 1']
+
+## ! Workspace2: obsidian 
+[[on-window-detected]]
+if.app-id = 'md.obsidian'
+run = ['move-node-to-workspace 2']
+
+## ! Workspace3: Step 
+[[on-window-detected]]
+if.app-id = 'net.ankiweb.dtop'
+run = ['move-node-to-workspace 3']
+
+
+[[on-window-detected]]
+if.app-id = 'com.noteful-technologies.noteful'
+run = ['move-node-to-workspace 3']
+
+[[on-window-detected]]
+if.app-id = 'com.colliderli.iina'
+run = ['move-node-to-workspace 3']
+
+[[on-window-detected]]
+if.app-id = 'io.remnote'
+run = ['move-node-to-workspace 3']
+
+## ! Workspace4: School Related Extracurricular
+
+## ! Workspace5: Coding 
+[[on-window-detected]]
+if.app-id = 'dev.zed.Zed'
+run = "move-node-to-workspace 5"
+
+[[on-window-detected]]
+if.app-id = 'com.exafunction.windsurf'
+run = "move-node-to-workspace 5"
