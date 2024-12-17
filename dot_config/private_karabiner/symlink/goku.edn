@@ -140,6 +140,10 @@
       ;; [:!!period]
       ;; [:!!slash]
       [:!!delete_or_backspace :!Odelete_or_backspace]
+      [:!!left_arrow {:mkey {:x -2500}}]
+      [:!!right_arrow {:mkey {:x 2500}}]
+      [:!!up_arrow {:mkey {:y -2500}}]
+      [:!!down_arrow {:mkey {:y 2500}}]
     ]}
 
     {:des "F+S Simlayer" :rules [
