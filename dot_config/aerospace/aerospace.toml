@@ -65,69 +65,82 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
 # 'main' binding mode must be always presented
+
+# See: https://nikitabobko.github.io/AeroSpace/commands#mode
+
 [mode.main.binding]
+    # All possible keys:
+    # - Letters.        a, b, c, ..., z
+    # - Numbers.        0, 1, 2, ..., 9
+    # - Keypad numbers. keypad0, keypad1, keypad2, ..., keypad9
+    # - F-keys.         f1, f2, ..., f20
+    # - Special keys.   minus, equal, period, comma, slash, backslash, quote, semicolon, backtick,
+    # - Keypad special. keypadClear, keypadDecimalMark, keypadDivide, keypadEnter, keypadEqual,
+    #                   keypadMinus, keypadMultiply, keypadPlus
+    # - Arrows.         left, down, up, right
 
-# All possible keys:
-# - Letters.        a, b, c, ..., z
-# - Numbers.        0, 1, 2, ..., 9
-# - Keypad numbers. keypad0, keypad1, keypad2, ..., keypad9
-# - F-keys.         f1, f2, ..., f20
-# - Special keys.   minus, equal, period, comma, slash, backslash, quote, semicolon, backtick,
-# - Keypad special. keypadClear, keypadDecimalMark, keypadDivide, keypadEnter, keypadEqual,
-#                   keypadMinus, keypadMultiply, keypadPlus
-# - Arrows.         left, down, up, right
+    # All possible modifiers: cmd, alt, ctrl, shift
 
-# All possible modifiers: cmd, alt, ctrl, shift
+    # All possible commands: https://nikitabobko.github.io/AeroSpace/commands
 
-# All possible commands: https://nikitabobko.github.io/AeroSpace/commands
+    # See: https://nikitabobko.github.io/AeroSpace/commands#exec-and-forget
 
-# See: https://nikitabobko.github.io/AeroSpace/commands#exec-and-forget
+    # See: https://nikitabobko.github.io/AeroSpace/commands#layout
+    alt-period = 'layout tiles horizontal vertical'
+    alt-comma = 'layout accordion horizontal vertical'
 
-# See: https://nikitabobko.github.io/AeroSpace/commands#layout
-alt-period = 'layout tiles horizontal vertical'
-alt-comma = 'layout accordion horizontal vertical'
-
-# See: https://nikitabobko.github.io/AeroSpace/commands#focus
-ctrl-h = 'focus left'
-ctrl-j = 'focus down'
-ctrl-k = 'focus up'
-ctrl-l = 'focus right'
+    # See: https://nikitabobko.github.io/AeroSpace/commands#focus
+    ctrl-h = 'focus left'
+    ctrl-j = 'focus down'
+    ctrl-k = 'focus up'
+    ctrl-l = 'focus right'
 
 
-# See: https://nikitabobko.github.io/AeroSpace/commands#move
-ctrl-shift-h = 'move left'
-ctrl-shift-j = 'move down'
-ctrl-shift-k = 'move up'
-ctrl-shift-l = 'move right'
+    # See: https://nikitabobko.github.io/AeroSpace/commands#move
+    ctrl-shift-h = 'move left'
+    ctrl-shift-j = 'move down'
+    ctrl-shift-k = 'move up'
+    ctrl-shift-l = 'move right'
 
-# ! Aerospace window commands 
-alt-backslash = 'layout floating tiling'
-alt-enter = 'fullscreen'
-alt-b = ['join-with left', 'mode main']
-# alt-z = 'flatten-workspace-tree'
-alt-slash = 'flatten-workspace-tree'
-alt-z = 'workspace-back-and-forth'
+    # ! Aerospace window commands 
+    alt-backslash = 'layout floating tiling'
+    alt-enter = 'fullscreen'
+    alt-b = ['join-with left', 'mode main']
+    # alt-z = 'flatten-workspace-tree'
+    alt-slash = 'flatten-workspace-tree'
+    alt-z = 'workspace-back-and-forth'
 
-ctrl-minus = 'resize smart -50' # See: https://nikitabobko.github.io/AeroSpace/commands#resize
-ctrl-equal = 'resize smart +50'
+    ctrl-minus = 'resize smart -50' # See: https://nikitabobko.github.io/AeroSpace/commands#resize
+    ctrl-equal = 'resize smart +50'
 
-## ! Workspace Navigation
-alt-cmd-ctrl-shift-d = 'workspace-back-and-forth'
-alt-left = 'workspace prev'
-alt-right = 'workspace next'
+    ## ! Workspace Navigation
+    alt-cmd-ctrl-shift-d = 'workspace-back-and-forth'
+    alt-left = 'workspace prev'
+    alt-right = 'workspace next'
 
-alt-1 = 'workspace 1'
-alt-shift-1 = ['move-node-to-workspace 1']
-alt-2 = 'workspace 2'
-alt-shift-2 = ['move-node-to-workspace 2']
-alt-3 = 'workspace 3'
-alt-shift-3 = ['move-node-to-workspace 3']
-alt-4 = 'workspace 4'
-alt-shift-4 = ['move-node-to-workspace 4']
-alt-5 = 'workspace 5'
-alt-shift-5 = ['move-node-to-workspace 5']
-alt-6 = 'workspace 6'
-alt-shift-6 = ['move-node-to-workspace 6']
+    alt-1 = 'workspace 1'
+    alt-shift-1 = ['move-node-to-workspace 1']
+    alt-2 = 'workspace 2'
+    alt-shift-2 = ['move-node-to-workspace 2']
+    alt-3 = 'workspace 3'
+    alt-shift-3 = ['move-node-to-workspace 3']
+    alt-4 = 'workspace 4'
+    alt-shift-4 = ['move-node-to-workspace 4']
+    alt-5 = 'workspace 5'
+    alt-shift-5 = ['move-node-to-workspace 5']
+    alt-6 = 'workspace 6'
+    alt-shift-6 = ['move-node-to-workspace 6']
+
+
+    cmd-shift-r = 'mode resize'
+
+[mode.resize.binding]
+    h = 'resize width -150'
+    j = 'resize height +150'
+    k = 'resize height -150'
+    l = 'resize width +150'
+    enter = 'mode main'
+    esc = 'mode main'
 
 ## ! Floating Windows
 [[on-window-detected]]
