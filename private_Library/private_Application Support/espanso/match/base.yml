@@ -27,19 +27,19 @@ matches:
   # Dynamic Matches
 
   - trigger: ;dd
-    replace: "{{mydate}}"
+    replace: "{{mydate}} "
     vars:
       - name: mydate
         type: date
         params:
-          format: "%Y-%m-%d"
+          format: "%Y-%m-%d "
   - trigger: ;sd
     replace: "{{mydate}}"
     vars:
       - name: mydate
         type: date
         params:
-          format: "%y.%m.%d"
+          format: "%y-%m-%d"
   - trigger: ;jj
     replace: "## [[{{mydate}}]]\n - "
     vars:
@@ -47,9 +47,17 @@ matches:
         type: date
         params:
           format: "%Y-%m-%d"
+  #obsidian today
+  - trigger: ;ot 
+    replace: "[[{{mydate}}]] "
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%Y-%m-%d"
 
   - trigger: ;dt
-    replace: "{{mytime}}"
+    replace: "{{mytime}} "
     vars:
       - name: mytime
         type: date

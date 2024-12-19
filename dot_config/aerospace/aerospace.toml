@@ -107,7 +107,7 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
     alt-enter = 'fullscreen'
     alt-b = ['join-with left', 'mode main']
     # alt-z = 'flatten-workspace-tree'
-    alt-slash = 'flatten-workspace-tree'
+    alt-u = 'flatten-workspace-tree'
     alt-z = 'workspace-back-and-forth'
 
     ctrl-minus = 'resize smart -50' # See: https://nikitabobko.github.io/AeroSpace/commands#resize

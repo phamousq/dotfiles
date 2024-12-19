@@ -99,6 +99,7 @@
       [[:f :j] :!Cspacebar]
       [[:d :b] :!Cmission_control]
       [[:d :g] :mission_control]
+      [{:sim [:j :k] :modi {:mandatory [:left_command]}} :!Cdelete_or_backspace]
       [[:j :k] :!Odelete_or_backspace]
       [[:j :l] :return_or_enter]
       [[:f :tab] :!Stab]
@@ -106,6 +107,7 @@
       [[:z :v] :!Cv]
       [[:f :k] :!!f]
       [[:f :q] :!Ctab]
+      [[:j :semicolon] :escape]
     ]}
     {:des "Hyper" :rules [
       [:caps_lock :!CSOleft_control nil {:alone :escape}]
@@ -125,10 +127,10 @@
       ;; [:!!d]
       ;; [:!!f]
       ;; [:!!g]
-      [:!!h :left_arrow]
-      [:!!j :down_arrow]
-      [:!!k :up_arrow]
-      [:!!l :right_arrow]
+      [:!CTOS##QWERh :##left_arrow]
+      [:!CTOS##QWERj :##down_arrow]
+      [:!CTOS##QWERk :##up_arrow]
+      [:!CTOS##QWERl :##right_arrow]
       ;; [:!!z]
       ;; [:!!x]
       [:!!c :button1]
@@ -156,6 +158,8 @@
       [:##d :!Oz ["FSmode" 1]]
       [:##n :!Oleft_arrow ["FSmode" 1]]
       [:##m :!Oright_arrow ["FSmode" 1]]
+      [:##a :!Oa ["FSmode" 1]]
+      [:##u :!Ou ["FSmode" 1]]
     ]}
     {:des "8bitdo anki goku" :rules [
       [:h :1                       [:anki :8bitdo]]
