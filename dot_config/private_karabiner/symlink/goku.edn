@@ -14,51 +14,58 @@
 ;; ## | optional any
 
 ;; boilerplate
-;; [:q]
-;; [:w]
-;; [:e]
-;; [:r]
-;; [:t]
-;; [:y]
-;; [:u]
-;; [:i]
-;; [:o]
-;; [:p]
-;; [:a]
-;; [:s]
-;; [:d]
-;; [:f]
-;; [:g]
-;; [:h]
-;; [:j]
-;; [:k]
-;; [:l]
-;; [:z]
-;; [:x]
-;; [:c]
-;; [:v]
-;; [:b]
-;; [:n]
-;; [:m]
-;; [:comma]
-;; [:slash]
-;; [:spacebar]
-;; [:return_or_enter]
-;; [:tab]
-;; [:left_arrow]
-;; [:right_arrow]
-;; [:up_arrow]
-;; [:down_arrow]
-;; [:delete_or_backspace]
-;; [:delete_forward]
-;; [:caps_lock]
-;; [:escape]
+  ;; [:q]
+  ;; [:w]
+  ;; [:e]
+  ;; [:r]
+  ;; [:t]
+  ;; [:y]
+  ;; [:u]
+  ;; [:i]
+  ;; [:o]
+  ;; [:p]
+  ;; [:a]
+  ;; [:s]
+  ;; [:d]
+  ;; [:f]
+  ;; [:g]
+  ;; [:h]
+  ;; [:j]
+  ;; [:k]
+  ;; [:l]
+  ;; [:z]
+  ;; [:x]
+  ;; [:c]
+  ;; [:v]
+  ;; [:b]
+  ;; [:n]
+  ;; [:m]
+  ;; [:comma]
+  ;; [:slash]
+  ;; [:spacebar]
+  ;; [:return_or_enter]
+  ;; [:tab]
+  ;; [:left_arrow]
+  ;; [:right_arrow]
+  ;; [:up_arrow]
+  ;; [:down_arrow]
+  ;; [:delete_or_backspace]
+  ;; [:delete_forward]
+  ;; [:caps_lock]
+  ;; [:escape]
 
 ;; after making changes to this file, cm apply, and goku in order to see changes in karabiner file
 ;; not ideal to have to repeat "FSmode", [:anki :8bitdo], everytime, but i don't think there is a way around this.
 {
   :profiles
-    {:Main { :default true :sim 60 :delay 170 :alone 170 :held 170}}
+    {:Main { 
+        :default true 
+        :sim 30
+        :delay 170 
+        :alone 170 
+        :held 170
+      }
+    }
 
   :templates {
     :open "open -a '%s'"
@@ -87,31 +94,71 @@
     :anki ["^net\\.ankiweb\\.dtop$"]
   } ;;applications
 
+  :modifiers {
+    :hyper [:command :shift :control :option]
+  }
+
+  :simlayers {
+    :qMode {:key :q}
+    :wMode {:key :w} ;; word navigation
+    :eMode {:key :e}
+    :rMode {:key :r}
+    :yMode {:key :y}
+    :aMode {:key :a} ;; Hyper rules
+    :sMode {:key :s} ;; focus navigation
+    :dMode {:key :d} ;; space navigation
+    :fMode {:key :f}
+    :zMode {:key :z} ;; mouse
+    :xMode {:key :x} ;; 
+    :cMode {:key :c} ;; symbols
+    :vMode {:key :v} ;; number keys
+  }
+
   :main [
     {:des "Basic Modifications" :rules [
       [:!Sdelete_or_backspace :delete_forward]
       [:!Cd :!Ttab]
+
+      ;; Anki 
       [:!Sspacebar :1 :anki]
       [:!Rspacebar :1 :anki]
+
+      ;; Shift Delete
+      [:##left_shift :left_shift nil {:alone :escape}]
+      [:##right_shift :right_shift nil {:alone :!Odelete_or_backspace}]
+
+      ;; cmd alone
+      [:left_command :left_command nil {:alone :!Ctab}]
+
+      ;; hyper definitions
+
+      [:##caps_lock :!CSOleft_control nil {:alone :escape}]
+      ;; [:##right_command :!CSOleft_control nil {:alone :return_or_enter}]
+      [:##right_command :right_shift]
     ]}
+
     {:des "Simultaneous keys / Chording" :rules [
       [{:sim [:comma :slash] :modi {:optional [:any]}} :caps_lock]
       [[:f :j] :!Cspacebar]
+      [[:f :d] :!Ctab]
       [[:d :b] :!Cmission_control]
       [[:d :g] :mission_control]
       [{:sim [:j :k] :modi {:mandatory [:left_command]}} :!Cdelete_or_backspace]
+      [{:sim [:j :k] :modi {:mandatory [:left_shift]}} :delete_forward]
       [[:j :k] :!Odelete_or_backspace]
-      [[:j :l] :return_or_enter]
+      [{:sim [:j :l] :modi {:optional [:any]}} :return_or_enter]
       [[:f :tab] :!Stab]
       [[:z :c] :!Cc]
-      [[:z :v] :!Cv]
+      [[:z :v] :!Cc]
+      [[:c :v] :!Cv]
       [[:f :k] :!!f]
-      [[:f :q] :!Ctab]
+      [[:f :q] :tab]
       [[:j :semicolon] :escape]
+      [[:j :slash] :escape]
+      [[:h :l] :tab]
     ]}
+
     {:des "Hyper" :rules [
-      [:caps_lock :!CSOleft_control nil {:alone :escape}]
-      [:right_command :!CSOleft_control nil {:alone :escape}]
       ;; [!!q]
       ;; [:!!w]
       ;; [:!!e]
@@ -135,9 +182,9 @@
       ;; [:!!x]
       [:!!c :button1]
       [:!!v :return_or_enter]
-      [:!!b :!Ob]
-      [:!!n :!Oleft_arrow]
-      [:!!m :!Oright_arrow]
+      [:!!b :!Ob] ;;balancing should be on other layer
+      [:!!n :!Tleft_arrow]
+      [:!!m :!Tright_arrow]
       ;; [:!!comma
       ;; [:!!period]
       ;; [:!!slash]
@@ -148,46 +195,153 @@
       [:!!down_arrow {:mkey {:y 2500}}]
     ]}
 
-    {:des "F+S Simlayer" :rules [
-      [{:sim[:f :s] :simo {:afterup {:set ["FSmode" 0]}}} ["FSmode" 1]]
-      [:##spacebar :left_shift ["FSmode" 1]]
-      [:##h :!Th ["FSmode" 1]]
-      [:##j :!Tj ["FSmode" 1]]
-      [:##k :!Tk ["FSmode" 1]]
-      [:##l :!Tl ["FSmode" 1]]
-      [:##d :!Oz ["FSmode" 1]]
-      [:##n :!Oleft_arrow ["FSmode" 1]]
-      [:##m :!Oright_arrow ["FSmode" 1]]
-      [:##a :!Oa ["FSmode" 1]]
-      [:##u :!Ou ["FSmode" 1]]
+    {:des "Layer Modifications" :rules [ 
+      ;; :qMode
+      :wMode ;; word navigation
+        [:y :!Odelete_or_backspace]
+        [:u :delete_or_backspace]
+        [:i :delete_forward]
+        [:o :!Odelete_or_backspace]
+        [:p :!Cdelete_or_backspace]
+        [:h :!CSleft_arrow]
+        [:j :!OSleft_arrow]
+        [:k :!Sright_arrow]
+        [:l :!OSright_arrow]
+        [:m :!Sleft_arrow]
+        [:l :!Sright_arrow]
+      ;; :eMode
+      ;; :rMode
+
+      :aMode ;; hyper drop in replacement
+        [:f :escape]
+        [:e :escape]
+        [:u :!CSopen_bracket]
+        [:i :!CSclose_bracket]
+        [:o :!Oreturn_or_enter]
+        [:##p :delete_or_backspace]
+
+
+        [:##h :##left_arrow]
+        [:##j :##down_arrow]
+        [:##k :##up_arrow]
+        [:##l :##right_arrow]
+
+        [:v :return_or_enter]
+
+        [:n :!Tleft_arrow]
+        [:m :!Tright_arrow]
+
+        [:##s :delete_or_backspace]
+
+      :sMode ;; window navigation
+        [:##h :!Th]
+        [:##spacebar :left_shift]
+        [:##j :!Tj]
+        [:##k :!Tk]
+        [:##l :!Tl]
+        [:##d :!Cmission_control]
+        [:m :!Tleft_arrow] ;;aerospace change this to O
+        [:comma :!Tright_arrow]
+        [:u :!Tleft_arrow]
+        [:i :!Tright_arrow]
+        [:##u :!Ou]
+        [:##p :!Obackslash]
+        [:g :!Oz]
+
+      :dMode ;; move spaces/desktops
+        [:u :!O1]
+        [:i :!O2]
+        [:o :!O3]
+        [:j :!O4]
+        [:k :!O5]
+        [:l :!O6]
+
+      ;; :fMode
+
+      :zMode ;; mouse movement
+        [:!Rj {:mkey {:x -2200}}]
+        [:j {:mkey {:x -1500}}]
+        [:!Rl {:mkey {:x 2200}}]
+        [:l {:mkey {:x 1500}}]
+        [:!Ri {:mkey {:y -2200}}]
+        [:i {:mkey {:y -1500}}]
+        [:!Rk {:mkey {:y 1500}}]
+        [:k {:mkey {:y 1500}}]
+        [:m {:mkey {:vwheel 32}}]
+        [:comma {:mkey {:vwheel -32}}]
+
+        [:left_arrow {:mkey {:x -1500}}]
+        [:right_arrow {:mkey {:x 2200}}]
+        [:up_arrow {:mkey {:y -2200}}]
+        [:down_arrow {:mkey {:y 2200}}]
+        [:c :button1]
+        [:v :button2]
+      
+      ;; :xMode
+      
+      :cMode ;; symbols
+        [:y :!S9]
+        [:u :!S1]
+        [:i :!S2]
+        [:o :!S3]
+        [:p :!S0]
+        [:j :!S4]
+        [:k :!S5]
+        [:l :!S6]
+        [:m :!S7]
+        [:comma :!S8]
+        [:period :!S9]
+
+        [:##h :open_bracket]
+        [:##semicolon :quote]
+        [:##slash :backslash]
+        [:##n :grave_accent_and_tilde]
+
+      
+      :vMode ;;numbers & operators
+        [:##y :0]
+        [:##u :1]
+        [:##i :2]
+        [:##o :3]
+        [:##j :4]
+        [:##k :5]
+        [:##l :6]
+        [:##m :7]
+        [:##comma :8]
+        [:##period :9]
+
+        [:h :!Sequal_sign]
+        [:semicolon :hyphen]
+        [:n :!S8]
+        [:slash :slash]
     ]}
-    {:des "8bitdo anki goku" :rules [
-      [:h :1                       [:anki :8bitdo]]
-      [:h :tab                     [:!anki :8bitdo]]
-      [:g :spacebar                [:anki :8bitdo]]
-      [:g :return_or_enter         [:!anki :8bitdo]]
-      [:j :2                       [:anki :8bitdo]]
-      ;; [:j :fn                      [:!anki :8bitdo]]
-      [:j :!Td                      [:!anki :8bitdo]]
-      [:i :n                       [:anki :8bitdo]]
-      [:i :right_arrow             [:!anki :8bitdo]]
-      [:c :d                       [:anki :8bitdo]]
-      [:c :right_arrow             [:!anki :8bitdo]]
-      [:f :s                       [:anki :8bitdo]]
-      [:f {:mkey {:vwheel 32}}     [:!anki :8bitdo]]
-      [:d :tab                     [:anki :8bitdo]]
-      [:d :left_arrow              [:!anki :8bitdo]]
-      [:e :y                  [:anki :8bitdo]]
-      [:e {:mkey {:vwheel -32}}    [:!anki :8bitdo]]
-      [:o :h                       [:anki :8bitdo]]
-      [:o :!Cd                     [:!anki :8bitdo]]
-      [:n :!Ctab                   [:anki :8bitdo]]
-      [:n :!Ctab                   [:!anki :8bitdo]]
-      [:k :hyphen                       [:anki :8bitdo]]
-      [:k :!Ca                     [:!anki :8bitdo]]
-      [:m :u                       [:anki :8bitdo]]
-      [:m :!Odelete_or_backspace   [:!anki :8bitdo]]
-      [:s :!Cv                     [:!anki :8bitdo]]
+
+    {:des "8bitdo" :rules [:8bitdo
+      [:h :1                       :anki]
+      [:h :tab                     :!anki]
+      [:g :spacebar                :anki]
+      [:g :return_or_enter         :!anki]
+      [:j :2                       :anki]
+      [:j :!Td                     :!anki]
+      [:i :n                       :anki]
+      [:i :right_arrow             :!anki]
+      [:c :d                       :anki]
+      [:c :right_arrow             :!anki]
+      [:f :s                       :anki]
+      [:f {:mkey {:vwheel 32}}     :!anki]
+      [:d :tab                     :anki]
+      [:d :left_arrow              :!anki]
+      [:e :y                       :anki]
+      [:e {:mkey {:vwheel -32}}    :!anki]
+      [:o :h                       :anki]
+      [:o :!Cd                     :!anki]
+      [:n :!Ctab                   :anki]
+      [:n :!Ctab                   :!anki]
+      [:k :hyphen                  :anki]
+      [:k :!Ca                     :!anki]
+      [:m :u                       :anki]
+      [:m :!Odelete_or_backspace   :!anki]
+      [:s :!Cv                     :!anki]
     ]}
   ] ;;main
 } ;;EOF

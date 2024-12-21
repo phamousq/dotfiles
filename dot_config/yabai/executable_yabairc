@@ -1,0 +1,49 @@
+# sudo yabai --load-sa
+# yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+# shortcuts are located in skhd/skhdrc
+
+# Float small, non-resizable windows
+yabai -m signal --add event=window_created action='yabai -m query --windows --window $YABAI_WINDOW_ID | jq -er ".\"can-resize\" or .\"is-floating\"" || yabai -m window $YABAI_WINDOW_ID --toggle float' label="floatSmallWindows"
+# yabai -m signal --add event=window_created action="~/.config/yabai"
+yabai -m signal --add event=space_changed action="yabai -m window --focus \$(yabai -m query --windows --space | jq .[0].id)"
+
+yabai_config=(
+  window_placement          second_child
+  focus_follows_mouse       autoraise
+  mouse_modifier            fn
+  window_animation_duration 0.0
+  layout                    bsp
+  split_type                vertical
+  auto_balance              on
+  top_padding               5
+  bottom_padding            5
+  left_padding              5
+  right_padding             5
+  window_gap                5
+  mouse_modifier            ctrl
+  mouse_action1             move
+  mouse_action2             resize
+  mouse_follows_focus       off
+  focus_follows_mouse       off
+)
+yabai -m config ${yabai_config[*]}
+
+
+# when window is dropped in center of another window, swap them (on edges it will split it)
+yabai -m mouse_drop_action swap
+
+# disable specific apps
+yabai -m rule --add app="Resolve"                       manage=off
+yabai -m rule --add app="^System Settings$"             manage=off
+yabai -m rule --add app="^Calculator$"                  manage=off
+yabai -m rule --add app="^Karabiner-EventViewer$"       manage=off
+yabai -m rule --add app="^Toggl Track$"                 manage=off
+yabai -m rule --add app="(VLC|Preview|Settings|Finder|Shottr|BetterTouchTool|Logi|Activity Monitor|Stickies|Dictionary|zoom.us|Notes|Browse)"                          manage=off
+
+yabai -m rule --add app="^(Messages|Spotify)$" space=1
+yabai -m rule --add app="^(Obsidian)$" space=2
+yabai -m rule --add app="^(Arc)$" space=3
+yabai -m rule --add app="^(Anki|IINA)$" space=4
+yabai -m rule --add app="^(Windsurf|iTerm2)$" space=1
+
+borders active_color=0xFFfeb367 inactive_color=0x00FFFFFF width=5.0 &
