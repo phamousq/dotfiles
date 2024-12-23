@@ -125,7 +125,7 @@
 
       ;; Shift Delete
       [:##left_shift :left_shift nil {:alone :escape}]
-      [:##right_shift :right_shift nil {:alone :!Odelete_or_backspace}]
+      [:##right_shift :right_shift nil {:alone :escape}]
 
       ;; cmd alone
       [:left_command :left_command nil {:alone :!Ctab}]
@@ -198,6 +198,7 @@
     {:des "Layer Modifications" :rules [ 
       ;; :qMode
       :wMode ;; word navigation
+        [:spacebar :vk_none]
         [:y :!Odelete_or_backspace]
         [:u :delete_or_backspace]
         [:i :delete_forward]
@@ -213,12 +214,14 @@
       ;; :rMode
 
       :aMode ;; hyper drop in replacement
-        [:f :escape]
+        [:spacebar :vk_none]
+        [:f :!Cspacebar]
         [:e :escape]
         [:u :!CSopen_bracket]
         [:i :!CSclose_bracket]
-        [:o :!Oreturn_or_enter]
+        [:o :!Oq]
         [:##p :delete_or_backspace]
+        [:semicolon :!TSa]
 
 
         [:##h :##left_arrow]
@@ -234,6 +237,7 @@
         [:##s :delete_or_backspace]
 
       :sMode ;; window navigation
+        [:spacebar :vk_none]
         [:##h :!Th]
         [:##spacebar :left_shift]
         [:##j :!Tj]
@@ -249,16 +253,22 @@
         [:g :!Oz]
 
       :dMode ;; move spaces/desktops
+        [:spacebar :vk_none]
+        [:##y :!Th]
+        [:##p :!Tl]
         [:u :!O1]
         [:i :!O2]
         [:o :!O3]
         [:j :!O4]
         [:k :!O5]
         [:l :!O6]
+        [:h :!Tleft_arrow]
+        [:semicolon :!Tright_arrow]
 
       ;; :fMode
 
       :zMode ;; mouse movement
+        [:spacebar :vk_none]
         [:!Rj {:mkey {:x -2200}}]
         [:j {:mkey {:x -1500}}]
         [:!Rl {:mkey {:x 2200}}]
@@ -280,6 +290,7 @@
       ;; :xMode
       
       :cMode ;; symbols
+        [:spacebar :vk_none]
         [:y :!S9]
         [:u :!S1]
         [:i :!S2]
@@ -299,6 +310,7 @@
 
       
       :vMode ;;numbers & operators
+        [:spacebar :vk_none]
         [:##y :0]
         [:##u :1]
         [:##i :2]
@@ -311,12 +323,12 @@
         [:##period :9]
 
         [:h :!Sequal_sign]
-        [:semicolon :hyphen]
+        [:##semicolon :##hyphen]
         [:n :!S8]
-        [:slash :slash]
+        [:##slash :slash]
     ]}
 
-    {:des "8bitdo" :rules [:8bitdo
+    {:des "8bitdo" :rules [[:condi :8bitdo]
       [:h :1                       :anki]
       [:h :tab                     :!anki]
       [:g :spacebar                :anki]
@@ -342,6 +354,7 @@
       [:m :u                       :anki]
       [:m :!Odelete_or_backspace   :!anki]
       [:s :!Cv                     :!anki]
+      
     ]}
   ] ;;main
 } ;;EOF
