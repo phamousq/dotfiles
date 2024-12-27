@@ -48,9 +48,7 @@ matches:
         params:
           format: "%y-%m-%d"
   - trigger: ;jj
-    replace: |
-      ### [[{{mydate}}]]
-       - 
+    replace: "## [[{{mydate}}]]\n - "
     vars:
       - name: mydate
         type: date
@@ -68,4 +66,4 @@ matches:
   - trigger: ;fmtmd
     replace: |
       Please respond to the above request with data formatted as [format]
-      [format] =  
+      [format] =

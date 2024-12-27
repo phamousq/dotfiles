@@ -52,7 +52,8 @@ alt - 0x2A : yabai -m window --toggle float --grid 11:13:1:1:11:9
 # -- Modifying Window Size --
 
 # maximize a window
-# alt - return : yabai -m window --toggle zoom-fullscreen
+alt - return : yabai -m window --toggle zoom-fullscreen
+# alt - return : yabai -m window --toggle native-fullscreen
 
 alt - return : yabai -m window --toggle float    --grid 21:21:1:1:19:19
 
@@ -83,7 +84,7 @@ alt + ctrl - o : yabai -m window --space next; skhd -k "ctrl - right"; yabai -m 
 shift + alt - p : yabai -m space --focus prev;
 shift + alt - n : yabai -m window --space next;
 
-# move window to space #; documented not working 2024-12-20 
+# move window to space #; documented not working 2024-12-20
 shift + alt - 1 : yabai -m window --space 1;
 shift + alt - 2 : yabai -m window --space 2;
 shift + alt - 3 : yabai -m window --space 3;
