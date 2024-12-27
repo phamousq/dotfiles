@@ -261,7 +261,7 @@
         [:spacebar :vk_none]
         [:##y :!Th]
         [:##p :!Tl]
-        [:u :!Sslash]
+        [:u :!O1]
         [:i :!O2]
         [:o :!O3]
         [:j :!O4]
@@ -295,6 +295,9 @@
         [:down_arrow {:mkey {:y 2200}}]
         [:c :button1]
         [:v :button2]
+
+        [:u :volume_decrement]
+        [:i :volume_increment]
 
       ;; :xMode
 
