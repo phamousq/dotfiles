@@ -128,6 +128,9 @@
       [:!Sspacebar :1 :anki]
       [:!Rspacebar :1 :anki]
 
+      ;; enter
+      [:!Osemicolon :return_or_enter]
+
       ;; Shift Delete
       [:##left_shift :left_shift nil {:alone :escape}]
       [:##right_shift :right_shift nil {:alone :escape}]
@@ -136,7 +139,6 @@
       [:left_command :left_command nil {:alone :!Ctab}]
 
       ;; hyper definitions
-
       [:##caps_lock :!CSOleft_control nil {:alone :escape}]
       ;; [:##right_command :!CSOleft_control nil {:alone :return_or_enter}]
       [:##right_command :right_shift nil {:alone :escape}]
