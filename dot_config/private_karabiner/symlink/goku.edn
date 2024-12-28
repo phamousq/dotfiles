@@ -256,8 +256,8 @@
         [:##l :##right_arrow] ;; ---
         [:semicolon :return_or_enter]
         [:##p :delete_or_backspace]
-        [:n :!Copen_bracket]
-        [:m :!Cclose_bracket]
+        [:m :!Copen_bracket]
+        [:comma :!Cclose_bracket]
         [:slash :!CTOSopen_bracket]
 
       :sMode ;; window navigation
