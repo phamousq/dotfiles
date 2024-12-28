@@ -115,6 +115,10 @@
     :vMode {:key :v :modi {:optional :any}} ;; number keys
   }
 
+  :layers {
+    :test {:key :q :modi {:optional :any}}
+  }
+
   :main [
     {:des "Basic Modifications" :rules [
       [:!Sdelete_or_backspace :delete_forward]
@@ -136,6 +140,13 @@
       [:##caps_lock :!CSOleft_control nil {:alone :escape}]
       ;; [:##right_command :!CSOleft_control nil {:alone :return_or_enter}]
       [:##right_command :right_shift nil {:alone :escape}]
+    ]}
+
+
+    {:des "Layers" :rules [
+        ;; :w-layer
+      [[:q :w] ["mouseQB" 1] :!mouseQB]
+      [[:q :w] ["mouseQB" 0] :mouseQB]
     ]}
 
     {:des "Simultaneous keys / Chording" :rules [
@@ -225,24 +236,24 @@
         [:e :escape]
         [:y :!Stab]
         [:u :tab]
-        [:h :tab]
         [:o :volume_decrement]
         [:p :volume_increment]
         [:##v :##return_or_enter]
         [:w :delete_or_backspace]
 
         ;; right hand
-        [:##j :##left_arrow]
-        [:##k :##down_arrow]
-        [:##i :##up_arrow]
-        [:##l :##right_arrow]
-        ;; [:##h :##left_arrow]
-        ;; [:##j :##down_arrow]
-        ;; [:##k :##up_arrow]
+        ;; [:##j :##left_arrow]
+        ;; [:##k :##down_arrow]
+        ;; [:##i :##up_arrow]
         ;; [:##l :##right_arrow]
+        ;; [:h :tab]
+        [:##h :##left_arrow]
+        [:##j :##down_arrow]
+        [:##k :##up_arrow]
+        [:##l :##right_arrow]
         [:semicolon :return_or_enter]
         [:##p :delete_or_backspace]
-        [:n :!Tleft_arrow]
+        [:n :!Copen_bracket]
         [:m :!Tright_arrow]
         [:slash :!CTOSopen_bracket]
 
