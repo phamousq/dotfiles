@@ -148,8 +148,8 @@
       [[:q :w] ["mouseQB" 1] :!mouseQB]
       [[:q :w] ["mouseQB" 0] :mouseQB]
 
-      :mouseQB
-      []
+      ;; :mouseQB
+      ;; []
     ]}
 
     {:des "Simultaneous keys / Chording" :rules [
