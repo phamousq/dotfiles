@@ -93,6 +93,7 @@
     :fusion ["^com\\.apple\\.fusion$"]
     :anki ["^net\\.ankiweb\\.dtop$"]
     :kindle ["com\\.amazon\\.Lassen"]
+    :photos ["com\\.apple\\.Photos"]
   } ;;applications
 
   :modifiers {
@@ -241,8 +242,9 @@
         [:e :escape]
         [:y :!Stab]
         [:u :tab]
-        [:o :volume_decrement]
-        [:p :volume_increment]
+        [:i :volume_decrement]
+        [:o :volume_increment]
+        [:p :play_or_pause]
         [:##v :##return_or_enter]
         [:w :delete_or_backspace]
 
@@ -366,36 +368,48 @@
     ]}
 
     {:des "8bitdo" :rules [
-      [:condi :8bitdo]
-      [:h :1                       :anki]
-      [:h :tab                     :!anki]
-      [:g :spacebar                :anki]
-      [:g :return_or_enter         :!anki]
-      [:j :2                       :anki]
-      [:j :!Td                     :!anki]
-      [:i :n                       :anki]
-      [:i :right_arrow             :!anki]
-      [:c :d                       :anki]
-      [:c :right_arrow             :!anki]
-      [:f :s                       :anki]
-      [:f {:mkey {:vwheel 32}}     :!anki]
-      [:d :tab                     :anki]
-      [:d :left_arrow              :!anki]
-      [:e :y                       :anki]
-      [:e {:mkey {:vwheel -32}}    :!anki]
-      [:o :h                       :anki]
-      [:o :!Cd                     :!anki]
-      [:n :!Ctab                   :anki]
-      [:n :!Ctab                   :!anki]
-      [:k :hyphen                  :anki]
-      [:k :!Ca                     :!anki]
-      [:m :u                       :anki]
-      [:m :!Odelete_or_backspace   :!anki]
-      [:s :!Cv                     :!anki]
+      :8bitdo
+        [:n :!Ctab      ]
+        [:k :left_shift ]
+
+      [:condi :8bitdo :anki]
+        [:g :spacebar                ]
+        [:!Sg :4                      ]
+        [:h :1                       ]
+        [:!Sh :hyphen                 ]
+        [:j :2                       ]
+        [:!Sj :y                      ]
+        [:i :n                       ]
+        [:!Si :h                      ]
+        [:c :d                       ]
+        [:f :s                       ]
+        [:d :tab                     ]
+        [:e :y                       ]
+        [:o :h                       ]
+        [:m :u                       ]
+        [:!Sm :!S2                    ]
+
+      [:condi :8bitdo :!anki]
+        [:h :tab                     ]
+        [:g :return_or_enter         ]
+        [:j :!Td                     ]
+        [:i :right_arrow             ]
+        [:!Si :left_arrow             ]
+        [:c :right_arrow             ]
+        [:f {:mkey {:vwheel 32}}     ]
+        [:d :left_arrow              ]
+        [:e {:mkey {:vwheel -32}}    ]
+        [:o :!Cd                     ]
+        [:m :!Odelete_or_backspace   ]
+        [:!Sm :!Ca   ]
+        [:s :!Cv                     ]
     ]}
 
     {:des "kindle" :rules [[:condi :kindle]
         [:!Sspacebar :left_arrow]
+    ]}
+    {:des "photos" :rules [[:condi :photos]
+        ;; [:grave_accent_and_tilde :period]
     ]}
   ] ;;main
 } ;;EOF
