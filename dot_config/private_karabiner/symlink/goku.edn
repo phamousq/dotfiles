@@ -272,8 +272,8 @@
         [:##k :!Tk]
         [:##l :!Tl]
         [:##d :!Cmission_control]
-        [:m :!Tleft_arrow] ;;aerospace change this to O
-        [:comma :!Tright_arrow]
+        [:m :!Ox] ;;aerospace change this to O
+        [:comma :!OSx]
         [:y :!Copen_bracket]
         [:u :!CSopen_bracket]
         [:i :!CSclose_bracket]
@@ -370,7 +370,7 @@
     {:des "8bitdo" :rules [
       :8bitdo
         [:n :!Ctab      ]
-        [:k :left_shift ]
+        [:##k :left_shift nil {:alone :!Cz}]
 
       [:condi :8bitdo :anki]
         [:g :spacebar                ]
@@ -386,7 +386,7 @@
         [:d :tab                     ]
         [:e :y                       ]
         [:o :h                       ]
-        [:m :u                       ]
+        [:m :hyphen                       ]
         [:!Sm :!S2                    ]
 
       [:condi :8bitdo :!anki]
