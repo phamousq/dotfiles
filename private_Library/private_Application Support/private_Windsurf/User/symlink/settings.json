@@ -144,6 +144,7 @@
     "code-runner.runInTerminal": true,
     "eslint.enable": false,
     "ruff.format.preview": true,
-    "ruff.ignoreStandardLibrary": false,
-    "go.toolsManagement.autoUpdate": true
+    "go.toolsManagement.autoUpdate": true,
+    "windsurf.autoExecutionPolicy": "off",
+    "windsurf.explainAndFixInCurrentConversation": true
   }
