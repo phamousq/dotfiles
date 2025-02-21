@@ -15,5 +15,22 @@
     "source.fixAll": true,
     "source.organizeImports.biome": true
   },
-  "formatter": "language_server"
+  "formatter": "language_server",
+  "languages": {
+    "Python": {
+      "language_servers": [
+        "pyright",
+        "ruff"
+      ]
+    }
+  },
+  "lsp": {
+    "pyright": {
+      "settings": {
+        "python": {
+          "pythonPath": ".venv/bin/python"
+        }
+      }
+    }
+  }
 }
