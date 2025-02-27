@@ -341,6 +341,7 @@
         [:m :!S7]
         [:comma :!S8]
         [:period :!S9]
+        [:slash :!S0]
 
         [:##h :##open_bracket]
         [:##semicolon :quote]
@@ -360,6 +361,7 @@
         [:##m :7]
         [:##comma :8]
         [:##period :9]
+        [:##slash :0]
 
         [:h :!Sequal_sign]
         [:##semicolon :##hyphen]
