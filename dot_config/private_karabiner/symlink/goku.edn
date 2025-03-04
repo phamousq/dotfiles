@@ -370,9 +370,28 @@
     ]}
 
     {:des "8bitdo" :rules [
+      ;; Button mappings
+      ;;   [:g :A                ]
+      ;;   [:!Sg : L + A         ]
+      ;;   [:h :X                ]
+      ;;   [:!Sh :L + X          ]
+      ;;   [:j :B                ]
+      ;;   [:!Sj :L + B          ]
+      ;;   [:i :Y                ]
+      ;;   [:!Si :L + Y          ]
+      ;;   [:c :UP                       ]
+      ;;   [:f : RIGHT                        ]
+      ;;   [:d :DOWN                     ]
+      ;;   [:e :LEFT                       ]
+      ;;   [:o :START                       ]
+      ;;   [:m :SELECT                       ]
+      ;;   [:n :L bumper                       ]
+      ;;   [:k :L bumper                       ]
+
+      ;;    modifiers: !S = hold left bumper
       :8bitdo
-        [:n :!Ctab      ]
-        [:##k :left_shift nil {:alone :!Cz}]
+        [:n :!Cz      ]
+        [:##k :left_shift nil {:alone :!Otab}]
 
       [:condi :8bitdo :anki]
         [:g :spacebar                ]
@@ -394,6 +413,7 @@
       [:condi :8bitdo :!anki]
         [:h :tab                     ]
         [:g :return_or_enter         ]
+        [:!Sg :!Creturn_or_enter     ]
         [:j :!Td                     ]
         [:i :right_arrow             ]
         [:!Si :left_arrow             ]
