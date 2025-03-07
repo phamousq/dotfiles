@@ -409,6 +409,7 @@
         [:o :h                       ]
         [:m :hyphen                       ]
         [:!Sm :!S2                    ]
+        [:!Sn :period      ]
 
       [:condi :8bitdo :!anki]
         [:h :tab                     ]
@@ -416,14 +417,14 @@
         [:!Sg :!Creturn_or_enter     ]
         [:j :!Td                     ]
         [:i :right_arrow             ]
-        [:!Si :left_arrow             ]
+        [:!Si :left_arrow            ]
         [:c :right_arrow             ]
         [:f {:mkey {:vwheel 32}}     ]
         [:d :left_arrow              ]
         [:e {:mkey {:vwheel -32}}    ]
-        [:o :!Cd                     ]
+        [:o :!Otab                   ]
         [:m :!Odelete_or_backspace   ]
-        [:!Sm :!Ca   ]
+        [:!Sm :!Ca                   ]
         [:s :!Cv                     ]
     ]}
 
