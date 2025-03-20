@@ -79,7 +79,7 @@
       "*.tif": "default"
     },
     "redhat.telemetry.enabled": true,
-    "windsurf.autocompleteSpeed": "fast",
+    "windsurf.autocompleteSpeed": "default",
     "explorer.sortOrder": "filesFirst",
     "code-runner.executorMap": {
 
@@ -146,5 +146,9 @@
     "ruff.format.preview": true,
     "go.toolsManagement.autoUpdate": true,
     "windsurf.autoExecutionPolicy": "off",
-    "windsurf.explainAndFixInCurrentConversation": true
+    "windsurf.explainAndFixInCurrentConversation": false,
+    "windsurf.chatFontSize": "default",
+    "windsurf.rememberLastModelSelection": false,
+    "windsurf.openRecentConversation": false,
+    "windsurf.enableTabToJump": false
   }

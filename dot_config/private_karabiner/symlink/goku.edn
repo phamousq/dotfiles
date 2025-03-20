@@ -386,7 +386,7 @@
       ;;   [:o :START                       ]
       ;;   [:m :SELECT                       ]
       ;;   [:n :L bumper                       ]
-      ;;   [:k :L bumper                       ]
+      ;;   [:k :R bumper                       ]
 
       ;;    modifiers: !S = hold left bumper
       :8bitdo
@@ -412,7 +412,8 @@
         [:!Sn :hyphen      ]
 
       [:condi :8bitdo :!anki]
-        [:h :tab                     ]
+        [:h :!Creturn_or_enter       ]
+        [:!Sh :tab                   ]
         [:g :return_or_enter         ]
         [:!Sg :!Creturn_or_enter     ]
         [:j :!Td                     ]
