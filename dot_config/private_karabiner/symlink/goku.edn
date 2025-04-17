@@ -137,7 +137,7 @@
       [:##right_shift :right_shift nil {:alone :escape}]
 
       ;; cmd alone
-      [:left_command :left_command nil {:alone :!Otab}]
+      ;;[:left_command :left_command nil {:alone :!Otab}]
 
       ;; hyper definitions
       [:##caps_lock :!CSOleft_control nil {:alone :escape}]
@@ -412,8 +412,8 @@
         [:!Sn :hyphen      ]
 
       [:condi :8bitdo :!anki]
-        [:h :!Creturn_or_enter       ]
-        [:!Sh :tab                   ]
+        [:h :tab       ]
+        [:!Sh :!Creturn_or_enter                   ]
         [:g :return_or_enter         ]
         [:!Sg :!Creturn_or_enter     ]
         [:j :!Td                     ]
@@ -424,6 +424,7 @@
         [:d :left_arrow              ]
         [:e {:mkey {:vwheel -32}}    ]
         [:o :!Otab                   ]
+        [:!So :!Ttab                   ]
         [:m :!Odelete_or_backspace   ]
         [:!Sm :!Ca                   ]
         [:s :!Cv                     ]

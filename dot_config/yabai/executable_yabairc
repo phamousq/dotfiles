@@ -23,7 +23,7 @@ yabai_config=(
   mouse_modifier            ctrl
   mouse_action1             move
   mouse_action2             resize
-  mouse_follows_focus       off
+  mouse_follows_focus       on
   focus_follows_mouse       off
 )
 yabai -m config ${yabai_config[*]}
