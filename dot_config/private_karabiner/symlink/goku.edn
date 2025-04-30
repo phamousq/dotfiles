@@ -94,6 +94,7 @@
     :anki ["^net\\.ankiweb\\.dtop$"]
     :kindle ["com\\.amazon\\.Lassen"]
     :photos ["com\\.apple\\.Photos"]
+    :iina ["com\\.colliderli\\.iina"]
   } ;;applications
 
   :modifiers {
@@ -382,16 +383,18 @@
       ;;   [:c :UP                       ]
       ;;   [:f : RIGHT                        ]
       ;;   [:d :DOWN                     ]
-      ;;   [:e :LEFT                       ]
-      ;;   [:o :START                       ]
-      ;;   [:m :SELECT                       ]
+      ;;   [:e :LEFT                       
+      ;;   [:o :START                       ]]k
+      ;;   [:n :SELECT                       ]
       ;;   [:n :L bumper                       ]
-      ;;   [:k :R bumper                       ]
+      ;;   [:m :R bumper                       ]
 
       ;;    modifiers: !S = hold left bumper
       :8bitdo
         [:n :!Cz      ]
-        [:##k :left_shift nil {:alone :!Otab}]
+        [:!So :!Ctab]
+        [:!Sn :!Otab]
+        [:k :left_shift nil {:alone :!Ctab}]
 
       [:condi :8bitdo :anki]
         [:g :spacebar                ]
@@ -411,6 +414,9 @@
         [:!Sm :!S2                    ]
         [:!Sn :hyphen      ]
 
+      [:condi :8bitdo :iina]
+        [:g :spacebar]
+
       [:condi :8bitdo :!anki]
         [:h :tab       ]
         [:!Sh :!Creturn_or_enter                   ]
@@ -419,17 +425,17 @@
         [:j :!Td                     ]
         [:i :right_arrow             ]
         [:!Si :left_arrow            ]
-        [:c :right_arrow             ]
+        [:c :left_arrow             ]
         [:f {:mkey {:vwheel 32}}     ]
-        [:d :left_arrow              ]
+        [:d :right_arrow              ]
         [:e {:mkey {:vwheel -32}}    ]
-        [:o :!Otab                   ]
+        [:o :!Cd                   ]
         [:!So :!Ttab                   ]
         [:m :!Odelete_or_backspace   ]
         [:!Sm :!Ca                   ]
         [:s :!Cv                     ]
     ]}
-
+ 
     {:des "kindle" :rules [[:condi :kindle]
         [:!Sspacebar :left_arrow]
     ]}
