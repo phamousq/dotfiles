@@ -109,7 +109,7 @@
     :yMode {:key :y :modi {:optional :any}}
     :aMode {:key :a :modi {:optional :any}} ;; Hyper rules
     :semicolonMode {:key :semicolon :modi {:optional :any}} ;; Hyper rules
-    :sMode {:key :s :modi {:optional :any}} ;; focus navigation
+    :slashMode {:key :slash :modi {:optional :any}} ;; focus navigation
     :dMode {:key :d :modi {:optional :any}} ;; space navigation
     :fMode {:key :f :modi {:optional :any}}
     :zMode {:key :z :modi {:optional :any}} ;; mouse
@@ -177,6 +177,7 @@
       [[:j :semicolon] :escape]
       [[:j :slash] :escape]
       [[:h :l] :tab]
+      [[:semicolon :l] :return_or_enter]
     ]}
 
     {:des "Hyper" :rules [
@@ -242,11 +243,11 @@
         [:l :right_arrow]
         [:u :!Odelete_or_backspace]
         [:i :delete_forward]
-        [:y :delete_or_backspace]
+        [:y :!Cdelete_or_backspace]
         [:m :return_or_enter]
         [:n :tab]
 
-      :aMode ;; hyper drop in replacement
+      :zMode ;; hyper drop in replacement
         ;; left hand
         [:spacebar :vk_none]
         [:s :!TSa]
@@ -277,7 +278,7 @@
         [:comma :!Cclose_bracket]
         [:slash :!CTOSopen_bracket]
 
-      :sMode ;; window navigation
+      :slashMode ;; window navigation
         [:spacebar :vk_none]
         [:##h :!Th]
         [:##spacebar :left_shift]
