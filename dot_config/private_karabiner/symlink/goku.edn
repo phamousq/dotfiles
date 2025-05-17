@@ -177,7 +177,7 @@
       [[:j :semicolon] :escape]
       [[:j :slash] :escape]
       [[:h :l] :tab]
-      [[:semicolon :l] :return_or_enter]
+      [[:semicolon :f] :return_or_enter]
     ]}
 
     {:des "Hyper" :rules [
@@ -318,7 +318,7 @@
 
       ;; :fMode
 
-      :zMode ;; mouse movement
+      :xMode ;; mouse movement
         [:spacebar :vk_none]
         [:!Rj {:mkey {:x -2200}}]
         [:j {:mkey {:x -1500}}]
@@ -342,7 +342,6 @@
         [:p :volume_increment]
         [:semicolon :play_or_pause]
 
-      ;; :xMode
 
       :cMode ;; symbols
         [:spacebar :vk_none]
