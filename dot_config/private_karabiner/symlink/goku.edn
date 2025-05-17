@@ -108,6 +108,7 @@
     :rMode {:key :r :modi {:optional :any}}
     :yMode {:key :y :modi {:optional :any}}
     :aMode {:key :a :modi {:optional :any}} ;; Hyper rules
+    :semicolonMode {:key :semicolon :modi {:optional :any}} ;; Hyper rules
     :sMode {:key :s :modi {:optional :any}} ;; focus navigation
     :dMode {:key :d :modi {:optional :any}} ;; space navigation
     :fMode {:key :f :modi {:optional :any}}
@@ -159,8 +160,9 @@
     {:des "Simultaneous keys / Chording" :rules [
       [{:sim [:comma :slash] :modi {:optional [:any]}} :caps_lock]
       [[:f :j] :!Cspacebar]
+      [[:f :l] :!TSa]
       [[:f :d] :!Ctab]
-      [[:d :b] :!Cmission_control]
+      [[:d :b] :!Qmission_control]
       [[:d :g] :mission_control]
       [{:sim [:j :k] :modi {:mandatory [:left_command]}} :!Cdelete_or_backspace]
       [{:sim [:j :k] :modi {:mandatory [:left_shift]}} :delete_forward]
@@ -233,12 +235,22 @@
         [:period :!SCup_arrow]
       ;; :eMode
       ;; :rMode
+      :semicolonMode
+        [:h :left_arrow]
+        [:j :down_arrow]
+        [:k :up_arrow]
+        [:l :right_arrow]
+        [:u :!Odelete_or_backspace]
+        [:i :delete_forward]
+        [:y :delete_or_backspace]
+        [:m :return_or_enter]
+        [:n :tab]
 
       :aMode ;; hyper drop in replacement
         ;; left hand
         [:spacebar :vk_none]
         [:s :!TSa]
-        [:d :!!f]
+        [:d :!Oq]
         [:f :!Cspacebar]
         [:e :escape]
         [:y :!Stab]
@@ -282,7 +294,7 @@
         [:##o :!Obackslash]
         [:g :!Oz]
         [:p :!Oreturn_or_enter]
-        [:semicolon :!Oq]
+        [:f :!Oq]
 
       :dMode ;; move spaces/desktops
         [:spacebar :vk_none]
@@ -299,6 +311,8 @@
 
         [:m :!Tleft_arrow]
         [:comma :!Tright_arrow]
+        [:f :!Tleft_arrow]
+        [:g :!Tright_arrow]
 
 
       ;; :fMode
@@ -394,7 +408,7 @@
         [:n :!Cz      ]
         [:!So :!Ctab]
         [:!Sn :!Otab]
-        [:k :left_shift nil {:alone :!Ctab}]
+        [:k :left_shift nil {:alone :!Otab}]
 
       [:condi :8bitdo :anki]
         [:g :spacebar                ]
@@ -429,7 +443,7 @@
         [:f {:mkey {:vwheel 32}}     ]
         [:d :right_arrow              ]
         [:e {:mkey {:vwheel -32}}    ]
-        [:o :!Cd                   ]
+        [:o :!Ttab                   ]
         [:!So :!Ttab                   ]
         [:m :!Odelete_or_backspace   ]
         [:!Sm :!Ca                   ]
