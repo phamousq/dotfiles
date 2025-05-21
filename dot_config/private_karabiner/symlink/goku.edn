@@ -95,6 +95,7 @@
     :kindle ["com\\.amazon\\.Lassen"]
     :photos ["com\\.apple\\.Photos"]
     :iina ["com\\.colliderli\\.iina"]
+    :remnote ["io\\.remnote"]
   } ;;applications
 
   :modifiers {
@@ -430,6 +431,16 @@
 
       [:condi :8bitdo :iina]
         [:g :spacebar]
+        
+      [:condi :8bitdo :remnote]
+        [:g :3                ]
+        ;; [:!Sg : L + A         ]
+        [:h :1                ]
+        ;; [:!Sh :L + X          ]
+        [:j :2                ]
+        ;; [:!Sj :L + B          ]
+        [:i :left_arrow                ]
+        [:!Si :right_arrow          ]
 
       [:condi :8bitdo :!anki]
         [:h :tab       ]
