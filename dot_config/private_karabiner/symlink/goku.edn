@@ -290,11 +290,13 @@
         [:m :!Ox] ;;aerospace change this to O
         [:comma :!OSx]
         [:y :!Copen_bracket]
+        [:e :!CSopen_bracket]
+        [:r :!CSclose_bracket]
         [:u :!CSopen_bracket]
         [:i :!CSclose_bracket]
         [:##u :!Ou]
         [:##o :!Obackslash]
-        [:g :!Oz]
+        [:g :!Ow]
         [:p :!Oreturn_or_enter]
         [:f :!Oq]
 
@@ -398,7 +400,7 @@
       ;;   [:c :UP                       ]
       ;;   [:f : RIGHT                        ]
       ;;   [:d :DOWN                     ]
-      ;;   [:e :LEFT                       
+      ;;   [:e :LEFT
       ;;   [:o :START                       ]]k
       ;;   [:n :SELECT                       ]
       ;;   [:n :L bumper                       ]
@@ -431,7 +433,7 @@
 
       [:condi :8bitdo :iina]
         [:g :spacebar]
-        
+
       [:condi :8bitdo :remnote]
         [:g :3                ]
         ;; [:!Sg : L + A         ]
@@ -460,7 +462,7 @@
         [:!Sm :!Ca                   ]
         [:s :!Cv                     ]
     ]}
- 
+
     {:des "kindle" :rules [[:condi :kindle]
         [:!Sspacebar :left_arrow]
     ]}
