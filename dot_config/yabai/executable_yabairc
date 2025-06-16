@@ -46,4 +46,4 @@ yabai -m rule --add app="^(Arc)$" space=3
 yabai -m rule --add app="^(Anki|IINA)$" space=4
 yabai -m rule --add app="^(Windsurf|iTerm2)$" space=1
 
-borders active_color=0xFFfeb367 inactive_color=0x00FFFFFF width=6.0 &
+# borders active_color=0xFFfeb367 inactive_color=0x00FFFFFF width=6.0 &
