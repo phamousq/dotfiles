@@ -62,6 +62,9 @@ matches:
         params:
           format: "%H%M"
 
+  - trigger: ;sig
+    replace: "Quinton Pham, MS4"
+
   # LLM Autoocomplete
   - trigger: ;fmtmd
     replace: |
