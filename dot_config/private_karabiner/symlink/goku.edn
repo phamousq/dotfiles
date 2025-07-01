@@ -445,10 +445,10 @@
         [:!Si :right_arrow          ]
 
       [:condi :8bitdo :!anki]
-        [:h :tab       ]
-        [:!Sh :!Creturn_or_enter                   ]
+        [:h :!Sopen_bracket       ]
+        ;; [:!Sh :                   ]
         [:g :return_or_enter         ]
-        [:!Sg :!Creturn_or_enter     ]
+        [:!Sg :tab     ]
         [:j :!Td                     ]
         [:i :right_arrow             ]
         [:!Si :left_arrow            ]
