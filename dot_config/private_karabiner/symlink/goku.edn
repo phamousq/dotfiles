@@ -446,7 +446,7 @@
 
       [:condi :8bitdo :!anki]
         [:h :!Sopen_bracket       ]
-        ;; [:!Sh :                   ]
+        [:!Sh :!Cf                   ]
         [:g :return_or_enter         ]
         [:!Sg :tab     ]
         [:j :!Td                     ]
