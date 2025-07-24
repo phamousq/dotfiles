@@ -34,19 +34,19 @@ matches:
         params:
           format: "%Y-%m-%d"
   - trigger: ;dd
-    replace: "{{mydate}} "
+    replace: "{{mydate}}"
     vars:
       - name: mydate
         type: date
         params:
           format: "%Y-%m-%d"
-  - trigger: ;sd
-    replace: "{{mydate}} "
+  - trigger: ;ds
+    replace: "{{mydate}}"
     vars:
       - name: mydate
         type: date
         params:
-          format: "%y-%m-%d"
+          format: "%Y-%m-%d %H%M"
   - trigger: ;jj
     replace: "## [[{{mydate}}]]\n - "
     vars:
@@ -55,7 +55,7 @@ matches:
         params:
           format: "%Y-%m-%d"
   - trigger: ;dt
-    replace: "{{mytime}} "
+    replace: "{{mytime}}"
     vars:
       - name: mytime
         type: date

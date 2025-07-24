@@ -56,212 +56,182 @@
 
 ;; after making changes to this file, cm apply, and goku in order to see changes in karabiner file
 ;; not ideal to have to repeat "FSmode", [:anki :8bitdo], everytime, but i don't think there is a way around this.
-{
-  :profiles
-    {:Main {
-        :default true
-        :sim 30
-        :delay 170
-        :alone 170
-        :held 170
-      }
-    }
+{:profiles
+ {:Main {:default true
+         :sim 30
+         :delay 170
+         :alone 170
+         :held 170}}
 
-  :templates {
-    :open "open -a '%s'"
-  } ;; templates
+ :templates {:open "open -a '%s'"} ;; templates
 
-  :devices {
-    :kb-apple [
-        {:vendor_id 1452} ;;mbp16
-        {:vendor_id 76}
-    ]
-    :8bitdo [
-        {:vendor_id 11720} ;; :product_id 12848 (lite), :product_id 36897 (micro)
-    ]
-    :keychronq11 [
-        {:vendor_id 13364}
-    ]
-  } ;; devices
+ :devices {:kb-apple [{:vendor_id 1452} ;;mbp16
+                      {:vendor_id 76}]
+           :8bitdo [{:vendor_id 11720} ;; :product_id 12848 (lite), :product_id 36897 (micro)
+                    ]
+           :keychronq11 [{:vendor_id 13364}]} ;; devices
 
-  :applications {
-    :chrome ["^com\\.google\\.Chrome$"]
-    :safari ["^com\\.apple\\.Safari$"]
-    :finder ["^com\\.apple\\.finder$"]
-    :typora ["^abnerworks\\.Typora$"]
-    :notes ["^com\\.apple\\.Notes$"]
-    :fusion ["^com\\.apple\\.fusion$"]
-    :anki ["^net\\.ankiweb\\.dtop$"]
-    :kindle ["com\\.amazon\\.Lassen"]
-    :photos ["com\\.apple\\.Photos"]
-    :iina ["com\\.colliderli\\.iina"]
-    :remnote ["io\\.remnote"]
-  } ;;applications
+ :applications {:chrome ["^com\\.google\\.Chrome$"]
+                :safari ["^com\\.apple\\.Safari$"]
+                :finder ["^com\\.apple\\.finder$"]
+                :typora ["^abnerworks\\.Typora$"]
+                :notes ["^com\\.apple\\.Notes$"]
+                :fusion ["^com\\.apple\\.fusion$"]
+                :anki ["^net\\.ankiweb\\.launcher$"]
+                :kindle ["com\\.amazon\\.Lassen"]
+                :photos ["com\\.apple\\.Photos"]
+                :iina ["com\\.colliderli\\.iina"]
+                :remnote ["io\\.remnote"]} ;;applications
 
-  :modifiers {
-    :hyper [:command :shift :control :option]
-  }
+ :modifiers {:hyper [:command :shift :control :option]}
 
-  :simlayers {
-    :qMode {:key :q :modi {:optional :any}}
-    :wMode {:key :w :modi {:optional :any}} ;; word navigation
-    :eMode {:key :e :modi {:optional :any}}
-    :rMode {:key :r :modi {:optional :any}}
-    :yMode {:key :y :modi {:optional :any}}
-    :aMode {:key :a :modi {:optional :any}} ;; Hyper rules
-    :semicolonMode {:key :semicolon :modi {:optional :any}} ;; Hyper rules
-    :slashMode {:key :slash :modi {:optional :any}} ;; focus navigation
-    :dMode {:key :d :modi {:optional :any}} ;; space navigation
-    :fMode {:key :f :modi {:optional :any}}
-    :zMode {:key :z :modi {:optional :any}} ;; mouse
-    :xMode {:key :x :modi {:optional :any}} ;;
-    :cMode {:key :c :modi {:optional :any}} ;; symbols
-    :vMode {:key :v :modi {:optional :any}} ;; number keys
-  }
+ :simlayers {:qMode {:key :q :modi {:optional :any}}
+             :wMode {:key :w :modi {:optional :any}} ;; word navigation
+             :eMode {:key :e :modi {:optional :any}}
+             :rMode {:key :r :modi {:optional :any}}
+             :yMode {:key :y :modi {:optional :any}}
+             :aMode {:key :a :modi {:optional :any}} ;; Hyper rules
+             :semicolonMode {:key :semicolon :modi {:optional :any}} ;; Hyper rules
+             :slashMode {:key :slash :modi {:optional :any}} ;; focus navigation
+             :dMode {:key :d :modi {:optional :any}} ;; space navigation
+             :fMode {:key :f :modi {:optional :any}}
+             :zMode {:key :z :modi {:optional :any}} ;; mouse
+             :xMode {:key :x :modi {:optional :any}} ;;
+             :cMode {:key :c :modi {:optional :any}} ;; symbols
+             :vMode {:key :v :modi {:optional :any}} ;; number keys
+             }
 
-  :layers {
-    :test {:key :q :modi {:optional :any}}
-  }
+ :layers {:test {:key :q :modi {:optional :any}}}
 
-  :main [
-    {:des "Basic Modifications" :rules [
-      [:!Sdelete_or_backspace :delete_forward]
-      [:!Cd :!Ttab]
+ :main [{:des "Basic Modifications" :rules [[:!Sdelete_or_backspace :delete_forward]
+                                            [:!Cd :!Ttab]
 
       ;; Anki
-      [:!Sspacebar :1 :anki]
-      [:!Rspacebar :1 :anki]
+                                            [:!Sspacebar :1 :anki]
+                                            [:!Rspacebar :1 :anki]
 
       ;; enter
-      [:!Osemicolon :return_or_enter]
+                                            [:!Osemicolon :return_or_enter]
 
       ;; Shift Delete
-      [:##left_shift :left_shift nil {:alone :escape}]
-      [:##right_shift :right_shift nil {:alone :escape}]
+                                            [:##left_shift :left_shift nil {:alone :escape}]
+                                            [:##right_shift :right_shift nil {:alone :escape}]
 
       ;; cmd alone
       ;;[:left_command :left_command nil {:alone :!Otab}]
 
       ;; hyper definitions
-      [:##caps_lock :!CSOleft_control nil {:alone :escape}]
+                                            [:##caps_lock :!CSOleft_control nil {:alone :escape}]
       ;; [:##right_command :!CSOleft_control nil {:alone :return_or_enter}]
-      [:##right_command :right_shift nil {:alone :escape}]
-    ]}
+                                            [:##right_command :right_shift nil {:alone :escape}]]}
 
-
-    {:des "Layers" :rules [
-        ;; :w-layer
-      [[:q :w] ["mouseQB" 1] :!mouseQB]
-      [[:q :w] ["mouseQB" 0] :mouseQB]
+        {:des "Layers" :rules [;; :w-layer
+                               [[:q :w] ["mouseQB" 1] :!mouseQB]
+                               [[:q :w] ["mouseQB" 0] :mouseQB]
 
       ;; :mouseQB
       ;; []
-    ]}
+                               ]}
 
-    {:des "Simultaneous keys / Chording" :rules [
-      [{:sim [:comma :slash] :modi {:optional [:any]}} :caps_lock]
-      [[:f :j] :!Cspacebar]
-      [[:f :l] :!TSa]
-      [[:f :d] :!Ctab]
-      [[:d :b] :!Qmission_control]
-      [[:d :g] :mission_control]
-      [{:sim [:j :k] :modi {:mandatory [:left_command]}} :!Cdelete_or_backspace]
-      [{:sim [:j :k] :modi {:mandatory [:left_shift]}} :delete_forward]
-      [[:j :k] :!Odelete_or_backspace]
-      [{:sim [:j :l] :modi {:optional [:any]}} :return_or_enter]
-      [[:f :tab] :!Stab]
-      [[:z :c] :!Cc]
-      [[:z :v] :!Cc]
-      [[:c :v] :!Cv]
-      [[:f :k] :!!f]
-      [[:f :q] :tab]
-      [[:j :semicolon] :escape]
-      [[:j :slash] :escape]
-      [[:h :l] :tab]
-      [[:semicolon :f] :return_or_enter]
-    ]}
+        {:des "Simultaneous keys / Chording" :rules [[{:sim [:comma :slash] :modi {:optional [:any]}} :caps_lock]
+                                                     [[:f :j] :!Cspacebar]
+                                                     [[:f :l] :!TSa]
+                                                     [[:f :d] :!Ctab]
+                                                     [[:d :b] :!Qmission_control]
+                                                     [[:d :g] :mission_control]
+                                                     [{:sim [:j :k] :modi {:mandatory [:left_command]}} :!Cdelete_or_backspace]
+                                                     [{:sim [:j :k] :modi {:mandatory [:left_shift]}} :delete_forward]
+                                                     [[:j :k] :!Odelete_or_backspace]
+                                                     [{:sim [:j :l] :modi {:optional [:any]}} :return_or_enter]
+                                                     [[:f :tab] :!Stab]
+                                                     [[:z :c] :!Cc]
+                                                     [[:z :v] :!Cc]
+                                                     [[:c :v] :!Cv]
+                                                     [[:f :k] :!!f]
+                                                     [[:f :q] :tab]
+                                                     [[:j :semicolon] :escape]
+                                                     [[:j :slash] :escape]
+                                                     [[:h :l] :tab]
+                                                     [[:semicolon :f] :return_or_enter]]}
 
-    {:des "Hyper" :rules [
-      ;; [!!q]
+        {:des "Hyper" :rules [;; [!!q]
       ;; [:!!w]
       ;; [:!!e]
       ;; [:!!r]
       ;; [:!!t]
       ;; [:!!y]
-      [:!!u :!CSopen_bracket]
-      [:!!i :!CSclose_bracket]
-      [:!!o :!Oreturn_or_enter]
-      [:!!p :!Obackslash]
+                              [:!!u :!CSopen_bracket]
+                              [:!!i :!CSclose_bracket]
+                              [:!!o :!Oreturn_or_enter]
+                              [:!!p :!Obackslash]
       ;; [:!!a]
-      [:!!s :delete_or_backspace]
+                              [:!!s :delete_or_backspace]
       ;; [:!!d]
       ;; [:!!f]
       ;; [:!!g]
-      [:!CTOS##QWERh :##left_arrow]
-      [:!CTOS##QWERj :##down_arrow]
-      [:!CTOS##QWERk :##up_arrow]
-      [:!CTOS##QWERl :##right_arrow]
+                              [:!CTOS##QWERh :##left_arrow]
+                              [:!CTOS##QWERj :##down_arrow]
+                              [:!CTOS##QWERk :##up_arrow]
+                              [:!CTOS##QWERl :##right_arrow]
       ;; [:!!z]
       ;; [:!!x]
-      [:!!c :button1]
-      [:!!v :return_or_enter]
-      [:!!b :!Ob] ;;balancing should be on other layer
-      [:!!n :!Tleft_arrow]
-      [:!!m :!Tright_arrow]
+                              [:!!c :button1]
+                              [:!!v :return_or_enter]
+                              [:!!b :!Ob] ;;balancing should be on other layer
+                              [:!!n :!Tleft_arrow]
+                              [:!!m :!Tright_arrow]
       ;; [:!!comma
       ;; [:!!period]
       ;; [:!!slash]
-      [:!!delete_or_backspace :!Odelete_or_backspace]
-      [:!!left_arrow {:mkey {:x -2500}}]
-      [:!!right_arrow {:mkey {:x 2500}}]
-      [:!!up_arrow {:mkey {:y -2500}}]
-      [:!!down_arrow {:mkey {:y 2500}}]
-    ]}
+                              [:!!delete_or_backspace :!Odelete_or_backspace]
+                              [:!!left_arrow {:mkey {:x -2500}}]
+                              [:!!right_arrow {:mkey {:x 2500}}]
+                              [:!!up_arrow {:mkey {:y -2500}}]
+                              [:!!down_arrow {:mkey {:y 2500}}]]}
 
-    {:des "Layer Modifications" :rules [
-      ;; :qMode
-      :wMode ;; word navigation
-        [:spacebar :vk_none]
-        [:y :!Cdelete_or_backspace]
-        [:u :!Odelete_or_backspace]
-        [:i :delete_forward]
-        [:o :!Odelete_or_backspace]
-        [:p :delete_or_backspace]
-        [:h :!OSleft_arrow]
-        [:j :!Sdown_arrow]
-        [:k :!Sup_arrow]
-        [:l :!OSright_arrow]
-        [:n :!SCleft_arrow]
-        [:m :!SCdown_arrow]
-        [:comma :!SCup_arrow]
-        [:period :!SCup_arrow]
+        {:des "Layer Modifications" :rules [;; :qMode
+                                            :wMode ;; word navigation
+                                            [:spacebar :vk_none]
+                                            [:y :!Cdelete_or_backspace]
+                                            [:u :!Odelete_or_backspace]
+                                            [:i :delete_forward]
+                                            [:o :!Odelete_or_backspace]
+                                            [:p :delete_or_backspace]
+                                            [:h :!OSleft_arrow]
+                                            [:j :!Sdown_arrow]
+                                            [:k :!Sup_arrow]
+                                            [:l :!OSright_arrow]
+                                            [:n :!SCleft_arrow]
+                                            [:m :!SCdown_arrow]
+                                            [:comma :!SCup_arrow]
+                                            [:period :!SCup_arrow]
       ;; :eMode
       ;; :rMode
-      :semicolonMode
-        [:h :left_arrow]
-        [:j :down_arrow]
-        [:k :up_arrow]
-        [:l :right_arrow]
-        [:u :!Odelete_or_backspace]
-        [:i :delete_forward]
-        [:y :!Cdelete_or_backspace]
-        [:m :return_or_enter]
-        [:n :tab]
+                                            :semicolonMode
+                                            [:h :left_arrow]
+                                            [:j :down_arrow]
+                                            [:k :up_arrow]
+                                            [:l :right_arrow]
+                                            [:u :!Odelete_or_backspace]
+                                            [:i :delete_forward]
+                                            [:y :!Cdelete_or_backspace]
+                                            [:m :return_or_enter]
+                                            [:n :tab]
 
-      :zMode ;; hyper drop in replacement
+                                            :zMode ;; hyper drop in replacement
         ;; left hand
-        [:spacebar :vk_none]
-        [:s :!TSa]
-        [:d :!Oq]
-        [:f :!Cspacebar]
-        [:e :escape]
-        [:y :!Stab]
-        [:u :tab]
-        [:i :volume_decrement]
-        [:o :volume_increment]
-        [:p :play_or_pause]
-        [:##v :##return_or_enter]
-        [:w :delete_or_backspace]
+                                            [:spacebar :vk_none]
+                                            [:s :!TSa]
+                                            [:d :!Oq]
+                                            [:f :!Cspacebar]
+                                            [:e :escape]
+                                            [:y :!Stab]
+                                            [:u :tab]
+                                            [:i :volume_decrement]
+                                            [:o :volume_increment]
+                                            [:p :play_or_pause]
+                                            [:##v :##return_or_enter]
+                                            [:w :delete_or_backspace]
 
         ;; right hand
         ;; [:##j :##left_arrow] ;; normal
@@ -269,126 +239,121 @@
         ;; [:##i :##up_arrow]
         ;; [:##l :##right_arrow]
         ;; [:h :!Copen_bracket] ;; ---
-        [:##h :##left_arrow] ;; vim
-        [:##j :##down_arrow]
-        [:##k :##up_arrow]
-        [:##l :##right_arrow] ;; ---
-        [:semicolon :return_or_enter]
-        [:##p :delete_or_backspace]
-        [:m :!Copen_bracket]
-        [:comma :!Cclose_bracket]
-        [:slash :!CTOSopen_bracket]
+                                            [:##h :##left_arrow] ;; vim
+                                            [:##j :##down_arrow]
+                                            [:##k :##up_arrow]
+                                            [:##l :##right_arrow] ;; ---
+                                            [:semicolon :return_or_enter]
+                                            [:##p :delete_or_backspace]
+                                            [:m :!Copen_bracket]
+                                            [:comma :!Cclose_bracket]
+                                            [:slash :!CTOSopen_bracket]
 
-      :slashMode ;; window navigation
-        [:spacebar :vk_none]
-        [:##h :!Th]
-        [:##spacebar :left_shift]
-        [:##j :!Tj]
-        [:##k :!Tk]
-        [:##l :!Tl]
-        [:##d :!Cmission_control]
-        [:m :!Ox] ;;aerospace change this to O
-        [:comma :!OSx]
-        [:y :!Copen_bracket]
-        [:e :!CSopen_bracket]
-        [:r :!CSclose_bracket]
-        [:u :!CSopen_bracket]
-        [:i :!CSclose_bracket]
-        [:##u :!Ou]
-        [:##o :!Obackslash]
-        [:g :!Ow]
-        [:p :!Oreturn_or_enter]
-        [:f :!Oq]
+                                            :slashMode ;; window navigation
+                                            [:spacebar :vk_none]
+                                            [:##h :!Th]
+                                            [:##spacebar :left_shift]
+                                            [:##j :!Tj]
+                                            [:##k :!Tk]
+                                            [:##l :!Tl]
+                                            [:##d :!Cmission_control]
+                                            [:m :!Ox] ;;aerospace change this to O
+                                            [:comma :!OSx]
+                                            [:y :!Copen_bracket]
+                                            [:e :!CSopen_bracket]
+                                            [:r :!CSclose_bracket]
+                                            [:u :!CSopen_bracket]
+                                            [:i :!CSclose_bracket]
+                                            [:##u :!Ou]
+                                            [:##o :!Obackslash]
+                                            [:g :!Ow]
+                                            [:p :!Oreturn_or_enter]
+                                            [:f :!Oq]
 
-      :dMode ;; move spaces/desktops
-        [:spacebar :vk_none]
-        [:##y :!Th]
-        [:##p :!Tl]
-        [:u :!T1]
-        [:i :!T2]
-        [:o :!T3]
-        [:j :!T4]
-        [:k :!T5]
-        [:l :!T6]
-        [:h :!Tleft_arrow]
-        [:semicolon :!Tright_arrow]
+                                            :dMode ;; move spaces/desktops
+                                            [:spacebar :vk_none]
+                                            [:##y :!Th]
+                                            [:##p :!Tl]
+                                            [:u :!T1]
+                                            [:i :!T2]
+                                            [:o :!T3]
+                                            [:j :!T4]
+                                            [:k :!T5]
+                                            [:l :!T6]
+                                            [:h :!Tleft_arrow]
+                                            [:semicolon :!Tright_arrow]
 
-        [:m :!Tleft_arrow]
-        [:comma :!Tright_arrow]
-        [:f :!Tleft_arrow]
-        [:g :!Tright_arrow]
+                                            [:m :!Tleft_arrow]
+                                            [:comma :!Tright_arrow]
+                                            [:f :!Tleft_arrow]
+                                            [:g :!Tright_arrow]
 
+;; :fMode
 
-      ;; :fMode
+                                            :xMode ;; mouse movement
+                                            [:spacebar :vk_none]
+                                            [:!Rj {:mkey {:x -2200}}]
+                                            [:j {:mkey {:x -1500}}]
+                                            [:!Rl {:mkey {:x 2200}}]
+                                            [:l {:mkey {:x 1500}}]
+                                            [:!Ri {:mkey {:y -2200}}]
+                                            [:i {:mkey {:y -1500}}]
+                                            [:!Rk {:mkey {:y 1500}}]
+                                            [:k {:mkey {:y 1500}}]
+                                            [:m {:mkey {:vwheel 32}}]
+                                            [:comma {:mkey {:vwheel -32}}]
 
-      :xMode ;; mouse movement
-        [:spacebar :vk_none]
-        [:!Rj {:mkey {:x -2200}}]
-        [:j {:mkey {:x -1500}}]
-        [:!Rl {:mkey {:x 2200}}]
-        [:l {:mkey {:x 1500}}]
-        [:!Ri {:mkey {:y -2200}}]
-        [:i {:mkey {:y -1500}}]
-        [:!Rk {:mkey {:y 1500}}]
-        [:k {:mkey {:y 1500}}]
-        [:m {:mkey {:vwheel 32}}]
-        [:comma {:mkey {:vwheel -32}}]
+                                            [:left_arrow {:mkey {:x -1500}}]
+                                            [:right_arrow {:mkey {:x 2200}}]
+                                            [:up_arrow {:mkey {:y -2200}}]
+                                            [:down_arrow {:mkey {:y 2200}}]
+                                            [:c :button1]
+                                            [:v :button2]
 
-        [:left_arrow {:mkey {:x -1500}}]
-        [:right_arrow {:mkey {:x 2200}}]
-        [:up_arrow {:mkey {:y -2200}}]
-        [:down_arrow {:mkey {:y 2200}}]
-        [:c :button1]
-        [:v :button2]
+                                            [:o :volume_decrement]
+                                            [:p :volume_increment]
+                                            [:semicolon :play_or_pause]
 
-        [:o :volume_decrement]
-        [:p :volume_increment]
-        [:semicolon :play_or_pause]
+                                            :cMode ;; symbols
+                                            [:spacebar :vk_none]
+                                            [:y :!Sslash]
+                                            [:u :!S1]
+                                            [:i :!S2]
+                                            [:o :!S3]
+                                            [:p :!S0]
+                                            [:j :!S4]
+                                            [:k :!S5]
+                                            [:l :!S6]
+                                            [:m :!S7]
+                                            [:comma :!S8]
+                                            [:period :!S9]
+                                            [:slash :!S0]
 
+                                            [:##h :##open_bracket]
+                                            [:##semicolon :quote]
+                                            [:##slash :backslash]
+                                            [:##n :grave_accent_and_tilde]
 
-      :cMode ;; symbols
-        [:spacebar :vk_none]
-        [:y :!Sslash]
-        [:u :!S1]
-        [:i :!S2]
-        [:o :!S3]
-        [:p :!S0]
-        [:j :!S4]
-        [:k :!S5]
-        [:l :!S6]
-        [:m :!S7]
-        [:comma :!S8]
-        [:period :!S9]
-        [:slash :!S0]
+                                            :vMode ;;numbers & operators
+                                            [:spacebar :vk_none]
+                                            [:##y :0]
+                                            [:##u :1]
+                                            [:##i :2]
+                                            [:##o :3]
+                                            [:##j :4]
+                                            [:##k :5]
+                                            [:##l :6]
+                                            [:##m :7]
+                                            [:##comma :8]
+                                            [:##period :9]
+                                            [:##slash :0]
 
-        [:##h :##open_bracket]
-        [:##semicolon :quote]
-        [:##slash :backslash]
-        [:##n :grave_accent_and_tilde]
+                                            [:h :!Sequal_sign]
+                                            [:##semicolon :##hyphen]
+                                            [:n :!S8]
+                                            [:##slash :slash]]}
 
-
-      :vMode ;;numbers & operators
-        [:spacebar :vk_none]
-        [:##y :0]
-        [:##u :1]
-        [:##i :2]
-        [:##o :3]
-        [:##j :4]
-        [:##k :5]
-        [:##l :6]
-        [:##m :7]
-        [:##comma :8]
-        [:##period :9]
-        [:##slash :0]
-
-        [:h :!Sequal_sign]
-        [:##semicolon :##hyphen]
-        [:n :!S8]
-        [:##slash :slash]
-    ]}
-
-    {:des "8bitdo" :rules [
-      ;; Button mappings
+        {:des "8bitdo" :rules [;; Button mappings
       ;;   [:g :A                ]
       ;;   [:!Sg : L + A         ]
       ;;   [:h :X                ]
@@ -407,67 +372,64 @@
       ;;   [:m :R bumper                       ]
 
       ;;    modifiers: !S = hold left bumper
-      :8bitdo
-        [:n :!Cz      ]
-        [:!So :!Ctab]
-        [:!Sn :!Otab]
-        [:k :left_shift nil {:alone :!Otab}]
+                               :8bitdo
+                               [:n :!Cz]
+                               [:!So :!Ctab]
+                               [:!Sn :!Otab]
+                               [:k :left_shift nil {:alone :!Otab}]
 
-      [:condi :8bitdo :anki]
-        [:g :spacebar                ]
-        [:!Sg :4                      ]
-        [:h :1                       ]
-        [:!Sh :!Cz                 ]
-        [:j :2                       ]
-        [:!Sj :hyphen                      ]
-        [:i :n                       ]
-        [:!Si :h                      ]
-        [:c :d                       ]
-        [:f :s                       ]
-        [:d :tab                     ]
-        [:e :y                       ]
-        [:o :!Cz                       ]
-        [:m :hyphen                       ]
-        [:!Sm :!S2                    ]
-        [:!Sn :hyphen      ]
+                               [:condi :8bitdo :anki]
+                               [:g :spacebar]
+                               [:!Sg :4]
+                               [:h :1]
+                               [:!Sh :!Cz]
+                               [:j :2]
+                               [:!Sj :hyphen]
+                               [:i :n]
+                               [:!Si :h]
+                               [:c :d]
+                               [:f :s]
+                               [:d :tab]
+                               [:e :y]
+                               [:o :!Cz]
+                               [:m :hyphen]
+                               [:!Sm :!S2]
+                               [:!Sn :hyphen]
 
-      [:condi :8bitdo :iina]
-        [:g :spacebar]
+                               [:condi :8bitdo :iina]
+                               [:g :spacebar]
 
-      [:condi :8bitdo :remnote]
-        [:g :3                ]
-        ;; [:!Sg : L + A         ]
-        [:h :1                ]
+                               [:condi :8bitdo :remnote]
+                               [:g :3]
+                               [:!Sg :4]
+                               [:h :1]
         ;; [:!Sh :L + X          ]
-        [:j :2                ]
+                               [:j :2]
         ;; [:!Sj :L + B          ]
-        [:i :left_arrow                ]
-        [:!Si :right_arrow          ]
+                               [:i :left_arrow]
+                               [:!Si :right_arrow]
 
-      [:condi :8bitdo :!anki]
-        [:h :!Sopen_bracket       ]
-        [:!Sh :!Cf                   ]
-        [:g :return_or_enter         ]
-        [:!Sg :tab     ]
-        [:j :!Td                     ]
-        [:i :right_arrow             ]
-        [:!Si :left_arrow            ]
-        [:c :left_arrow             ]
-        [:f {:mkey {:vwheel 50}}     ]
-        [:d :right_arrow              ]
-        [:e {:mkey {:vwheel -50}}    ]
-        [:o :!Ttab                   ]
-        [:!So :!Ttab                   ]
-        [:m :!Odelete_or_backspace   ]
-        [:!Sm :!Ca                   ]
-        [:s :!Cv                     ]
-    ]}
+                               [:condi :8bitdo :!anki]
+                               [:h :!Sopen_bracket]
+                               [:!Sh :!Cf]
+                               [:g :return_or_enter]
+                               [:!Sg :tab]
+                               [:j :!Td]
+                               [:i :right_arrow]
+                               [:!Si :left_arrow]
+                               [:c :left_arrow]
+                               [:f {:mkey {:vwheel 50}}]
+                               [:d :right_arrow]
+                               [:e {:mkey {:vwheel -50}}]
+                               [:o :!Ttab]
+                               [:!So :!Ttab]
+                               [:m :!Odelete_or_backspace]
+                               [:!Sm :!Ca]
+                               [:s :!Cv]]}
 
-    {:des "kindle" :rules [[:condi :kindle]
-        [:!Sspacebar :left_arrow]
-    ]}
-    {:des "photos" :rules [[:condi :photos]
+        {:des "kindle" :rules [[:condi :kindle]
+                               [:!Sspacebar :left_arrow]]}
+        {:des "photos" :rules [[:condi :photos]
         ;; [:grave_accent_and_tilde :period]
-    ]}
-  ] ;;main
+]}] ;;main
 } ;;EOF
