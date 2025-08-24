@@ -77,7 +77,7 @@
                 :typora ["^abnerworks\\.Typora$"]
                 :notes ["^com\\.apple\\.Notes$"]
                 :fusion ["^com\\.apple\\.fusion$"]
-                :anki ["^net\\.ankiweb\\.launcher$"]
+                :anki ["^net\\.ankiweb\\.dtop$"]
                 :kindle ["com\\.amazon\\.Lassen"]
                 :photos ["com\\.apple\\.Photos"]
                 :iina ["com\\.colliderli\\.iina"]
