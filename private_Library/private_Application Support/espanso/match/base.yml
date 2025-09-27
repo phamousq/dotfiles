@@ -15,6 +15,7 @@ matches:
       Join Zoom Meeting
       https://utexas.zoom.us/j/9602251508
       Meeting ID:  960 225 1508
+    force_clipboard: true
   - trigger: ;eadd
     replace: "- trigger:\nreplace:"
   - trigger: ;git

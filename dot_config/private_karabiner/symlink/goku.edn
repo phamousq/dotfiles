@@ -85,26 +85,25 @@
 
  :modifiers {:hyper [:command :shift :control :option]}
 
- :simlayers {:qMode {:key :q :modi {:optional :any}}
-             :wMode {:key :w :modi {:optional :any}} ;; word navigation
-             :eMode {:key :e :modi {:optional :any}}
-             :rMode {:key :r :modi {:optional :any}}
-             :yMode {:key :y :modi {:optional :any}}
-             :aMode {:key :a :modi {:optional :any}} ;; Hyper rules
-             :semicolonMode {:key :semicolon :modi {:optional :any}} ;; Hyper rules
-             :slashMode {:key :slash :modi {:optional :any}} ;; focus navigation
-             :dMode {:key :d :modi {:optional :any}} ;; space navigation
-             :fMode {:key :f :modi {:optional :any}}
-             :zMode {:key :z :modi {:optional :any}} ;; mouse
-             :xMode {:key :x :modi {:optional :any}} ;;
-             :cMode {:key :c :modi {:optional :any}} ;; symbols
-             :vMode {:key :v :modi {:optional :any}} ;; number keys
-             }
+ ;; :simlayers {:qMode {:key :q :modi {:optional :any}}
+ ;;             :wMode {:key :w :modi {:optional :any}} ;; word navigation
+ ;;             :eMode {:key :e :modi {:optional :any}}
+ ;;             :rMode {:key :r :modi {:optional :any}}
+ ;;             :yMode {:key :y :modi {:optional :any}}
+ ;;             :aMode {:key :a :modi {:optional :any}} ;; Hyper rules
+ ;;             :semicolonMode {:key :semicolon :modi {:optional :any}} ;; Hyper rules
+ ;;             :slashMode {:key :slash :modi {:optional :any}} ;; focus navigation
+ ;;             :dMode {:key :d :modi {:optional :any}} ;; space navigation
+ ;;             :fMode {:key :f :modi {:optional :any}}
+ ;;             :zMode {:key :z :modi {:optional :any}} ;; mouse
+ ;;             :xMode {:key :x :modi {:optional :any}} ;;
+ ;;             :cMode {:key :c :modi {:optional :any}} ;; symbols
+ ;;             :vMode {:key :v :modi {:optional :any}} ;; number keys
+ ;;             }
 
  :layers {:test {:key :q :modi {:optional :any}}}
 
  :main [{:des "Basic Modifications" :rules [[:!Sdelete_or_backspace :delete_forward]
-                                            [:!Cd :!Ttab]
 
       ;; Anki
                                             [:!Sspacebar :1 :anki]
@@ -133,26 +132,26 @@
       ;; []
                                ]}
 
-        {:des "Simultaneous keys / Chording" :rules [[{:sim [:comma :slash] :modi {:optional [:any]}} :caps_lock]
-                                                     [[:f :j] :!Cspacebar]
-                                                     [[:f :l] :!TSa]
-                                                     [[:f :d] :!Ctab]
-                                                     [[:d :b] :!Qmission_control]
-                                                     [[:d :g] :mission_control]
-                                                     [{:sim [:j :k] :modi {:mandatory [:left_command]}} :!Cdelete_or_backspace]
-                                                     [{:sim [:j :k] :modi {:mandatory [:left_shift]}} :delete_forward]
-                                                     [[:j :k] :!Odelete_or_backspace]
-                                                     [{:sim [:j :l] :modi {:optional [:any]}} :return_or_enter]
-                                                     [[:f :tab] :!Stab]
-                                                     [[:z :c] :!Cc]
-                                                     [[:z :v] :!Cc]
-                                                     [[:c :v] :!Cv]
-                                                     [[:f :k] :!!f]
-                                                     [[:f :q] :tab]
-                                                     [[:j :semicolon] :escape]
-                                                     [[:j :slash] :escape]
-                                                     [[:h :l] :tab]
-                                                     [[:semicolon :f] :return_or_enter]]}
+        ;; {:des "Simultaneous keys / Chording" :rules [[{:sim [:comma :slash] :modi {:optional [:any]}} :caps_lock]
+        ;;                                              [[:f :j] :!Cspacebar]
+        ;;                                              [[:f :l] :!TSa]
+        ;;                                              [[:f :d] :!Ctab]
+        ;;                                              [[:d :b] :!Qmission_control]
+        ;;                                              [[:d :g] :mission_control]
+        ;;                                              [{:sim [:j :k] :modi {:mandatory [:left_command]}} :!Cdelete_or_backspace]
+        ;;                                              [{:sim [:j :k] :modi {:mandatory [:left_shift]}} :delete_forward]
+        ;;                                              [[:j :k] :!Odelete_or_backspace]
+        ;;                                              [{:sim [:j :l] :modi {:optional [:any]}} :return_or_enter]
+        ;;                                              [[:f :tab] :!Stab]
+        ;;                                              [[:z :c] :!Cc]
+        ;;                                              [[:z :v] :!Cc]
+        ;;                                              [[:c :v] :!Cv]
+        ;;                                              [[:f :k] :!!f]
+        ;;                                              [[:f :q] :tab]
+        ;;                                              [[:j :semicolon] :escape]
+        ;;                                              [[:j :slash] :escape]
+        ;;                                              [[:h :l] :tab]
+        ;;                                              [[:semicolon :f] :return_or_enter]]}
 
         {:des "Hyper" :rules [;; [!!q]
       ;; [:!!w]
