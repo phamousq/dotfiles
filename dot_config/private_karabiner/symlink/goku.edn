@@ -176,9 +176,11 @@
       ;; [:!!x]
                               [:!!c :button1]
                               [:!!v :return_or_enter]
-                              [:!!b :!Ob] ;;balancing should be on other layer
                               [:!!n :!Tleft_arrow]
                               [:!!m :!Tright_arrow]
+                              [:!!semicolon :return_or_enter]
+                              [:!!g :mission_control]
+                              [:!!b :!Cmission_control]
       ;; [:!!comma
       ;; [:!!period]
       ;; [:!!slash]
