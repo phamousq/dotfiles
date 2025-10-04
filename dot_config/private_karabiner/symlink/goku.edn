@@ -57,11 +57,12 @@
 ;; after making changes to this file, cm apply, and goku in order to see changes in karabiner file
 ;; not ideal to have to repeat "FSmode", [:anki :8bitdo], everytime, but i don't think there is a way around this.
 {:profiles
- {:Main {:default true
-         :sim 30
-         :delay 170
-         :alone 170
-         :held 170}}
+ {:Main
+  {:default true
+   :sim 30
+   :delay 170
+   :alone 170
+   :held 170}}
 
  :templates {:open "open -a '%s'"} ;; templates
 
@@ -161,10 +162,11 @@
       ;; [:!!y]
                               [:!!u :!CSopen_bracket]
                               [:!!i :!CSclose_bracket]
-                              [:!!o :!Oreturn_or_enter]
-                              [:!!p :!Obackslash]
+                              [:!!o :!Ttab]
+                              [:!!p :!Odelete_or_backspace]
+                              [:!!w :!Ctab]
       ;; [:!!a]
-                              [:!!s :delete_or_backspace]
+                              [:!!s :!Ttab]
       ;; [:!!d]
       ;; [:!!f]
       ;; [:!!g]
