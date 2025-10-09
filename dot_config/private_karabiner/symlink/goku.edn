@@ -179,8 +179,10 @@
                               [:!!c :button1]
                               [:!!v :return_or_enter]
                               [:!!n :!Tleft_arrow]
-                              [:!!m :!Tright_arrow]
+                              [:!!m :!Tleft_arrow]
+                              [:!!comma :!Tright_arrow]
                               [:!!semicolon :return_or_enter]
+                              [:!!quote :tab]
                               [:!!g :mission_control]
                               [:!!b :!Cmission_control]
       ;; [:!!comma
