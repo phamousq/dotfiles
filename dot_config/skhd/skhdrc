@@ -5,10 +5,10 @@
 # -- Changing Window Focus --
 
 # change window focus within space; this is using f s mode with spacebar acting as shift in this mode
-ctrl - h : yabai -m window --focus west
-ctrl - j : yabai -m window --focus south
-ctrl - k : yabai -m window --focus north
-ctrl - l : yabai -m window --focus east
+ctrl - j : yabai -m window --focus west
+# ctrl - j : yabai -m window --focus south
+# ctrl - k : yabai -m window --focus north
+ctrl - k : yabai -m window --focus east
 
 ctrl + shift - h : yabai -m window --swap west
 ctrl + shift - j : yabai -m window --swap south
@@ -16,10 +16,11 @@ ctrl + shift - k : yabai -m window --swap north
 ctrl + shift - l : yabai -m window --swap east
 
 # # increase window size
-# alt + ctrl - y : yabai -m window --resize left:-100:0
-# alt + ctrl - u : yabai -m window --resize bottom:0:100
-# alt + ctrl - i : yabai -m window --resize top:0:-100
-# alt + ctrl - o : yabai -m window --resize right:100:0
+ctrl - h : yabai -m window --resize right:-150:0 2> /dev/null || yabai -m window --resize left:-150:0 2> /dev/null
+# ctrl - u : yabai -m window --resize bottom:0:150 2> /dev/null || yabai -m window --resize top:0:150 2> /dev/null
+# ctrl - i : yabai -m window --resize bottom:0:-150 2> /dev/null || yabai -m window --resize top:0:-150 2> /dev/null
+ctrl - l : yabai -m window --resize right:150:0 2> /dev/null || yabai -m window --resize left:150:0 2> /dev/null
+
 
 # # decrease window size
 alt - x : yabai -m window --resize right:-200:0 2> /dev/null || yabai -m window --resize left:-200:0 2> /dev/null
@@ -27,8 +28,9 @@ shift + alt - x : yabai -m window --resize right:200:0 2> /dev/null || yabai -m 
 
 # alt + ctrl + shift - y : yabai -m window --resize left:100:0
 # alt + ctrl + shift - u : yabai -m window --resize bottom:0:-100
-# alt + ctrl + shift - i : yabai -m window --resize top:0:100
+# alt + ctrl + shift - i : yabai -m window --resize bottom:0:100
 # alt + ctrl + shift - o : yabai -m window --resize right:-100:0
+
 
 # change focus between external displays (left and right)
 # ! requires sip
@@ -46,13 +48,13 @@ shift + alt - y : yabai -m space --mirror y-axis
 shift + alt - x : yabai -m space --mirror x-axis
 
 # toggle window float
-alt - q : yabai -m window --toggle float    --grid 21:21:1:1:19:19
+ctrl - q : yabai -m window --toggle float    --grid 21:21:1:1:19:19
 alt - 0x2A : yabai -m window --toggle float --grid 11:13:1:1:11:9
 
 # -- Modifying Window Size --
 
 # maximize a window
-alt - w : yabai -m window --toggle zoom-fullscreen
+ctrl - w : yabai -m window --toggle zoom-fullscreen
 # alt - return : yabai -m window --toggle native-fullscreen
 
 # alt - return : yabai -m window --toggle float    --grid 21:21:1:1:19:19
@@ -81,7 +83,7 @@ alt + ctrl - i : yabai -m window --space prev; skhd -k "ctrl - left"; yabai -m w
 alt + ctrl - o : yabai -m window --space next; skhd -k "ctrl - right"; yabai -m window recent --focus
 
 # move window to prev and next space
-shift + alt - p : yabai -m space --focus prev;
+shift + alt - p : yabaid -m space --focus prev;
 shift + alt - n : yabai -m window --space next;
 
 # move window to space #; documented not working 2024-12-20
