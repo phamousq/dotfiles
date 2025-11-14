@@ -11,7 +11,12 @@ global_vars:
 matches:
   # Simple text replacement
   - trigger: ;attest
-    replace: "I participated in the care and documentation of this patient visit. -Quinton Pham, MS4"
+    replace: |
+      I participated in the care and documentation of this patient visit. 
+      -Quinton Pham, MS4
+
+  - trigger: ;sig
+    replace: "Quinton Pham, MS4"
 
   - trigger: ;physical
     replace: |

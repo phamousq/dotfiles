@@ -113,13 +113,26 @@
       ;; enter
                                             [:!Osemicolon :return_or_enter]
 
+<<<<<<< Updated upstream
+=======
+      ;; Shift Delete
+                                            ;; [:##left_shift :left_shift nil {:alone :escape}]
+                                            ;; [:##right_shift :right_shift nil {:alone :escape}]
+
+>>>>>>> Stashed changes
       ;; cmd alone
       ;;[:left_command :left_command nil {:alone :!Otab}]
 
       ;; hyper definitions
+                                            [:!Rescape :caps_lock]
+
                                             [:##caps_lock :!CSOleft_control nil {:alone :escape}]
       ;; [:##right_command :!CSOleft_control nil {:alone :return_or_enter}]
+<<<<<<< Updated upstream
                                             [:##right_command :right_control]]}
+=======
+                                            [:##right_command :left_control]]}
+>>>>>>> Stashed changes
 
         {:des "Layers" :rules [;; :w-layer
                                [[:q :w] ["mouseQB" 1] :!mouseQB]
@@ -156,6 +169,7 @@
       ;; [:!!r]
       ;; [:!!t]
       ;; [:!!y]
+                              [:!Tequal_sign :caps_lock]
                               [:!!u :!CSopen_bracket]
                               [:!!i :!CSclose_bracket]
                               [:!!o :!Ttab]
@@ -178,7 +192,6 @@
                               [:!!m :!Tleft_arrow]
                               [:!!comma :!Tright_arrow]
                               [:!!semicolon :return_or_enter]
-                              [:!!Csemicolon :tab]
                               [:!!quote :tab]
                               [:!!g :mission_control]
                               [:!!b :!Cmission_control]

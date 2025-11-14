@@ -11,7 +11,7 @@ after-login-command = []
 # 'after-startup-command' is run after 'after-login-command'
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
 after-startup-command = [
-    'layout tiles horizontal vertical'
+    'layout tiles horizontal'
     # 'exec-and-forget borders active_color=0xfff19632 inactive_color=0xff494d64 width=5.0'
 ]
 # Colors: 0xffe1e3e4 default
@@ -26,7 +26,7 @@ enable-normalization-opposite-orientation-for-nested-containers = true
 # See: https://nikitabobko.github.io/AeroSpace/guide#layouts
 # The 'accordion-padding' specifies the size of accordion padding
 # You can set 0 to disable the padding feature
-accordion-padding = 40
+accordion-padding = 0
 
 # Possible values: tiles|accordion
 default-root-container-layout = 'tiles'
@@ -45,7 +45,7 @@ key-mapping.preset = 'qwerty'
 # See https://nikitabobko.github.io/AeroSpace/guide#on-focus-changed-callbacks
 # See https://nikitabobko.github.io/AeroSpace/commands#move-mouse
 on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
-# on-focus-changed = "move-mouse window-lazy-center"
+on-focus-changed = "move-mouse window-lazy-center"
 
 # Gaps between windows (inner-*) and between monitor edges (outer-*).
 # Possible values:
@@ -55,12 +55,12 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 #                 Monitor pattern is the same as for 'workspace-to-monitor-force-assignment'.
 #                 See: https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [gaps]
-    inner.vertical =   6
-    inner.horizontal = 6
-    outer.left =       6
-    outer.bottom =     6
-    outer.top =        6
-    outer.right =      6
+    inner.vertical =   3
+    inner.horizontal = 3
+    outer.left =       3
+    outer.bottom =     3
+    outer.top =        3
+    outer.right =      3
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -86,14 +86,18 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
     # See: https://nikitabobko.github.io/AeroSpace/commands#exec-and-forget
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#layout
-    alt-period = 'layout tiles horizontal vertical'
-    alt-comma = 'layout accordion horizontal vertical'
+    ctrl-period = 'layout tiles horizontal vertical'
+    ctrl-comma = 'layout accordion horizontal vertical'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#focus
-    ctrl-h = 'focus left'
-    ctrl-j = 'focus down'
-    ctrl-k = 'focus up'
-    ctrl-l = 'focus right'
+    # ctrl-h = 'focus left'
+    # ctrl-j = 'focus down'
+    # ctrl-k = 'focus up'
+    # ctrl-l = 'focus right'
+    ctrl-j = 'focus left'
+    ctrl-k = 'focus right'
+    ctrl-l = 'resize smart -300'
+    ctrl-semicolon = 'resize smart +300'
 
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move
@@ -102,10 +106,10 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
     ctrl-shift-k = 'move up'
     ctrl-shift-l = 'move right'
 
-    # ! Aerospace window commands 
+    # ! Aerospace window commands
     alt-backslash = 'layout floating tiling'
-    alt-enter = 'fullscreen'
-    alt-b = ['join-with left', 'mode main']
+    ctrl-enter = 'fullscreen'
+    # alt-b = ['join-with left', 'mode main']
     # alt-z = 'flatten-workspace-tree'
     alt-u = 'flatten-workspace-tree'
     alt-z = 'workspace-back-and-forth'
@@ -114,22 +118,22 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
     ctrl-equal = 'resize smart +50'
 
     ## ! Workspace Navigation
-    alt-cmd-ctrl-shift-d = 'workspace-back-and-forth'
-    alt-left = 'workspace prev'
-    alt-right = 'workspace next'
+    # alt-cmd-ctrl-shift-d = 'workspace-back-and-forth'
+    alt-cmd-ctrl-shift-n = 'workspace prev'
+    alt-cmd-ctrl-shift-m = 'workspace next'
 
-    alt-1 = 'workspace 1'
-    alt-shift-1 = ['move-node-to-workspace 1']
-    alt-2 = 'workspace 2'
-    alt-shift-2 = ['move-node-to-workspace 2']
-    alt-3 = 'workspace 3'
-    alt-shift-3 = ['move-node-to-workspace 3']
-    alt-4 = 'workspace 4'
-    alt-shift-4 = ['move-node-to-workspace 4']
-    alt-5 = 'workspace 5'
-    alt-shift-5 = ['move-node-to-workspace 5']
-    alt-6 = 'workspace 6'
-    alt-shift-6 = ['move-node-to-workspace 6']
+    ctrl-1 = 'workspace 1'
+    ctrl-shift-1 = ['move-node-to-workspace 1']
+    ctrl-2 = 'workspace 2'
+    ctrl-shift-2 = ['move-node-to-workspace 2']
+    ctrl-3 = 'workspace 3'
+    ctrl-shift-3 = ['move-node-to-workspace 3']
+    ctrl-4 = 'workspace 4'
+    ctrl-shift-4 = ['move-node-to-workspace 4']
+    ctrl-5 = 'workspace 5'
+    ctrl-shift-5 = ['move-node-to-workspace 5']
+    ctrl-6 = 'workspace 6'
+    ctrl-shift-6 = ['move-node-to-workspace 6']
 
 
     cmd-shift-r = 'mode resize'
@@ -181,7 +185,7 @@ run = 'layout floating'
 if.app-id = 'com.apple.MobileSMS'
 run = 'move-node-to-workspace 1'
 
-## ! Workspace2: obsidian 
+## ! Workspace2: obsidian
 [[on-window-detected]]
 if.app-id = 'md.obsidian'
 run = 'move-node-to-workspace 2'

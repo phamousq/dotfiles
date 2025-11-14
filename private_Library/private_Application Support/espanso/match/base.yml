@@ -26,7 +26,6 @@ matches:
     replace: git push
 
   # Dynamic Matches
-
   - trigger: ;df
     replace: "[[{{mydate}}]] "
     vars:
@@ -48,6 +47,7 @@ matches:
         type: date
         params:
           format: "%Y-%m-%d %H%M"
+
   - trigger: ;jj
     replace: "## [[{{mydate}}]]\n - "
     vars:
@@ -63,11 +63,11 @@ matches:
         params:
           format: "%H%M"
 
-  - trigger: ;sig
-    replace: "Quinton Pham, MS4"
-
   # LLM Autoocomplete
   - trigger: ;fmtmd
     replace: |
       Please respond to the above request with data formatted as [format]
       [format] =
+
+
+  # Obsidian Text Expansion
