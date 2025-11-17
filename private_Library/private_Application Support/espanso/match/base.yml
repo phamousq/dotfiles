@@ -26,21 +26,21 @@ matches:
     replace: git push
 
   # Dynamic Matches
-  - trigger: ;df
+  - trigger: zdf
     replace: "[[{{mydate}}]] "
     vars:
       - name: mydate
         type: date
         params:
           format: "%Y-%m-%d"
-  - trigger: ;dd
+  - trigger: zdd
     replace: "{{mydate}}"
     vars:
       - name: mydate
         type: date
         params:
           format: "%Y-%m-%d"
-  - trigger: ;ds
+  - trigger: zds
     replace: "{{mydate}}"
     vars:
       - name: mydate
@@ -48,14 +48,14 @@ matches:
         params:
           format: "%Y-%m-%d %H%M"
 
-  - trigger: ;jj
+  - trigger: zjj
     replace: "## [[{{mydate}}]]\n - "
     vars:
       - name: mydate
         type: date
         params:
           format: "%Y-%m-%d"
-  - trigger: ;dt
+  - trigger: zdt
     replace: "{{mytime}}"
     vars:
       - name: mytime
