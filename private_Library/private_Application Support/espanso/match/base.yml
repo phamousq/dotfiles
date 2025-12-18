@@ -63,11 +63,4 @@ matches:
         params:
           format: "%H%M"
 
-  # LLM Autoocomplete
-  - trigger: ;fmtmd
-    replace: |
-      Please respond to the above request with data formatted as [format]
-      [format] =
-
-
   # Obsidian Text Expansion
