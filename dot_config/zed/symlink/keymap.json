@@ -6,5 +6,28 @@
       "cmd-shift-k": "project_panel::ToggleFocus",
       "shift-enter": "repl::Run"
     }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-cmd-s": "workspace::Save"
+    }
+  },
+  {
+    "context": "ContextEditor > Editor",
+    "bindings": {
+      "cmd-s": "workspace::Save"
+    }
+  },
+  {
+    "context": "ContextEditor > Editor",
+    "bindings": {
+      "ctrl-cmd-s": "workspace::Save"
+    }
+  },
+  {
+    "bindings": {
+      "escape backspace backspace": "workspace::ToggleWorktreeSecurity"
+    }
   }
 ]
