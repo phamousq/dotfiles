@@ -6,6 +6,9 @@
 yabai -m signal --add event=window_created action='yabai -m query --windows --window $YABAI_WINDOW_ID | jq -er ".\"can-resize\" or .\"is-floating\"" || yabai -m window $YABAI_WINDOW_ID --toggle float' label="floatSmallWindows"
 # yabai -m signal --add event=window_created action="~/.config/yabai"
 yabai -m signal --add event=space_changed action="yabai -m window --focus \$(yabai -m query --windows --space | jq .[0].id)"
+# Add this to your yabairc to always append to the bottom
+# yabai -m signal --add event=window_created action="yabai -m window %1 --insert east"
+# yabai -m signal --add event=window_created action="yabai -m window $YABAI_WINDOW_ID --insert east"
 
 yabai_config=(
   window_placement          second_child
@@ -40,10 +43,10 @@ yabai -m rule --add app="^Karabiner-EventViewer$"       manage=off
 yabai -m rule --add app="^Toggl Track$"                 manage=off
 yabai -m rule --add app="(IINA|VLC|Settings|Finder|Shottr|BetterTouchTool|Logi|Activity Monitor|Stickies|Dictionary|Notes|Browse)"                          manage=off
 
-yabai -m rule --add app="^(Messages|Spotify)$" space=1
-yabai -m rule --add app="^(Obsidian)$" space=2
-yabai -m rule --add app="^(Arc)$" space=3
-yabai -m rule --add app="^(Anki|IINA)$" space=4
-yabai -m rule --add app="^(Windsurf|iTerm2)$" space=1
+# yabai -m rule --add app="^(Messages|Spotify)$" space=1
+# yabai -m rule --add app="^(Obsidian)$" space=2
+# yabai -m rule --add app="^(Arc)$" space=3
+# yabai -m rule --add app="^(Anki|IINA)$" space=4
+# yabai -m rule --add app="^(Windsurf|iTerm2)$" space=1
 
-# borders active_color=0xFFfeb367 inactive_color=0x00FFFFFF width=6.0 &
+borders active_color=0xFFfeb367 inactive_color=0x00FFFFFF width=8.0 &

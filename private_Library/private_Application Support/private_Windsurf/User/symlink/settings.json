@@ -55,7 +55,7 @@
     },
     "workbench.colorTheme": "GitHub Light Default",
     "security.workspace.trust.untrustedFiles": "open",
-    "workbench.preferredLightColorTheme": "GitHub Light Default",
+    "workbench.preferredLightColorTheme": "Monokai",
     "workbench.preferredDarkColorTheme": "GitHub Dark Default",
     "window.autoDetectColorScheme": true,
     "liveServer.settings.donotShowInfoMsg": true,
