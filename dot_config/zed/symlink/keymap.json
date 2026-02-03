@@ -29,5 +29,17 @@
     "bindings": {
       "escape backspace backspace": "workspace::ToggleWorktreeSecurity"
     }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd-shift-l": "editor::SelectAllMatches"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-shift-l": "workspace::ToggleLeftDock"
+    }
   }
 ]
