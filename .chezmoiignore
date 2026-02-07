@@ -1,5 +1,6 @@
 chezmoi.code-workspace
 **README.md
+**/myConfigFiles/**
 
 # Symlinks
 **/symlink/
